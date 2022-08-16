@@ -1,0 +1,54 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #000 !important;
+}
+ul, ul li{ list-style: none; margin: 0px; padding:0px;}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* side fillter option css here */
+.fillterbox{position: relative;}
+.fillterbox .fillter{ color: #fff; font-size: 20px; text-align: right; cursor: pointer; border:none; margin-bottom: 20px; background:#000;}
+.f_boder{background: transparent linear-gradient(120deg, #000000 0%, #835627 46%, #000000 100%) 0% 0% no-repeat padding-box; height: 2px; width: 100%;}
+.fillterinner .accordion, .fillterinner .accordion-item, .fillterinner .accordion-button{ background: #000 !important; border: none;}
+.fillterbox::before {width: 2px; height:450px; opacity: 1; position: absolute; left: -10px; top:50px; content: ''; z-index: 300;
+background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 100%) 0% 0% no-repeat padding-box;}
+.fillterinner h2.accordion-header{ margin: 0px; padding-top: 2px; background: linear-gradient(111deg, rgba(0,0,0,1) 0%, rgba(217,177,85,1) 30%, rgba(0,0,0,1) 80%);}
+.fillterinner button.accordion-button{ color: #D9B155; font-weight: 700; padding-left: 0px; padding-right: 0px; box-shadow:none; border-radius: 0 !important;}
+.fillterinner .accordion-button::after, .fillterinner .accordion-button.collapsed::after{ background: #000 url(../public/images/arrow-down.svg) 0 5px no-repeat; transform: rotate(0deg);}
+.fillterinner .accordion-body{ color: #fff; padding-left:0px; padding-right:0px; padding-top: 0px;}
+.fillterinner .accordion-body label{ display: block; color: #fff; font-size: 14px; font-weight: 300; margin-bottom: 15px;}
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #header{ position: relative;}
+  #header::after {position: absolute; content: ''; bottom: -8px; left: 0px; right: 0px; z-index: 500; margin: 0 auto; width: 100%; height: 10px; background: #D9B155;}
+  .fillterbox .fillter{ border: #fff solid 1px; padding: 3px 30px;}
+
+}

@@ -1,0 +1,255 @@
+/*.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+*/
+
+
+/* comman css here */
+.topquickinfo ul, .topquickinfo ul li, .h_textinfo ul, .h_textinfo ul li{ margin: 0px; padding: 0px;}
+.h_textinfo h1, .h_textinfo h2, .h_textinfo h3, .h_textinfo h4, .h_textinfo h5,
+.allescortpage h1, .duoescortpage h1
+{ color: #D9B155; font-size: 36px;}
+.h_textinfo h2{ font-size: 30px; margin-top: 30px;}
+.h_textinfo h3{ font-size: 24px; margin-top: 30px;}
+.h_textinfo h4{ font-size: 22px; margin-top: 30px;}
+.h_textinfo h5{ font-size: 20px; margin-top: 30px;}
+.aboutuspage h1{ text-align: center; margin-bottom: 50px;}
+
+
+
+/* Header css here */
+.logo{ position: absolute; top: 0px; left: 0px; right: 0px; margin:0 auto; width: 220px;}
+.topquickinfo { background: #000; padding: 10px 40px 5px 40px;} 
+.topquickinfo .topcall{background: url(../public/images/call_icon.svg) no-repeat 0px 0px; padding-left: 45px; float: left;}
+.topquickinfo a, .topquickinfo .topcall span{ color: #fff; text-decoration: none;}
+.topquickinfo a{ line-height: 20px; font-size: 16px;}
+.topquickinfo .topcall span{ font-size: 10px; display: block; line-height: 12px; text-transform: uppercase;}
+.topquickinfo .topwhatapps{background: url(../public/images/whatsapp_icon.svg) no-repeat 0px 0px; padding-left: 45px; padding-bottom: 12px; padding-right:20px; line-height: 30px; float: right;}
+.topquickinfo .toptelegram{background: url(../public/images/telegram_icon.svg) no-repeat 0px 0px; padding-left: 45px; padding-bottom: 12px; line-height: 30px; float: right;}
+.topmenu  { /*background: rgb(131,86,39);*/ display: block;  
+  background: linear-gradient(111deg, rgba(131,86,39,1) 0%, rgba(217,177,85,1) 35%, rgba(131,86,39,1) 100%); padding: 0px 20px; text-align: center;}
+.topmenu ul{ margin: 10px 0px; /*float: left;*/ padding: 0px;} 
+/*.topmenu ul:nth-child(2n){ margin: 10px 0px; float: right; padding: 0px;}*/
+.topmenu ul li{ display: inline-block;}
+.topmenu ul li a{ font-size: 16px; color: #fff; text-decoration:none; padding:12px 20px; line-height: 13px; display:block; white-space: nowrap;}
+.topmenu ul li a:hover{ background: #000; border-radius: 100px;} 
+.blank{ width: 34%;}
+
+
+/* home page text formatting css */
+.h_textinfo, .allescortpage, .duoescortpage{ padding: 40px;}
+
+.h_textinfo p, .h_textinfo ul li,
+.allescortpage p, .allescortpage ul li,
+.duoescortpage p, .duoescortpage ul li
+{ font-size: 16px; color: #fff; line-height: 26px; font-weight: 300; letter-spacing: 0.3px;}
+
+.h_textinfo p strong, .h_textinfo p span,
+.allescortpage p strong, .allescortpage p span,
+.duoescortpage p strong, .duoescortpage p span
+{ color: #D9B155;}
+
+.h_textinfo ul li::before,
+.allescortpage ul li::before,
+.duoescortpage ul li::before
+{ content: "\2022"; color: #D9B155; display: inline-block; width: 1em; margin-bottom: 10px;}
+
+
+
+/* Footer css here */
+.footer{ background: rgb(131,86,39); margin-top: 50px; 
+  background: linear-gradient(111deg, rgba(131,86,39,1) 0%, rgba(217,177,85,1) 35%, rgba(131,86,39,1) 100%);}
+.fotinfro{ width: 26%; padding: 20px 0px 0px 0px; background: #000; float:left;}
+.fotinfro ul li:first-child{ background: url(../public/images/f-email.svg) no-repeat 0px 10px; padding-left: 20px;}
+.fotinfro ul li:nth-child(2n){ background: url(../public/images/f-phone.svg) no-repeat 0px 10px; padding-left: 20px;}
+.fotinfro ul li a{ font-size: 16px; color: #fff; text-decoration:none; padding:2px 0px; display: inline-block;}
+.fotlinks{ width: 70%; float:left; padding: 50px 80px 30px 80px;}
+.fotlinks ul{ column-count: 3; padding-left: 15px;}
+.fotlinks ul li{ list-style:disc;}
+.fotlinks ul li a{ color: #000; text-decoration: none; font-size: 16px; line-height: 30px; display: inline-block;}
+.fotlinks h6{ font-size: 20px; text-transform: uppercase; font-weight: 700; color: #000;}
+.copyright{ font-size: 14px; color: #fff; text-align: center; background: #000; padding: 10px; clear: both;}
+.footer ul li a:hover, .topquickinfo a:hover{opacity: 0.6;}
+
+
+
+.h_thumnanils{ padding: 50px 0px 20px 0px;}
+
+.heading_shorby{ color: #fff; font-size: 18px; text-align:left; margin-bottom: 10px;}
+.thumouterbox{ position: relative; display: inline-block; margin-right: 20px; margin-bottom: 20px; width: 242px;}
+.thumouterbox .picbox{ height: 340px;}
+.thumouterbox .modelsname{background: linear-gradient(111deg, rgba(131,86,39,1) 0%, rgba(217,177,85,1) 35%, rgba(131,86,39,1) 100%);
+padding: 7px 10px; color: #fff; font-size: 14px; font-weight: 700;}
+.thumouterbox .modelsname span:first-child, .thumouterbox .modelsname span:nth-child(2n){ float: right; padding: 3px 2px;}
+.thumouterbox .modelslocation{ background-color: #fff; padding: 7px 10px; font-size: 12px; font-weight: 500;}
+.thumouterbox .modelslocation span:nth-child(2n){ float: right;}
+.available, .notavailable{width: 15px; height: 15px; display: inline-block; border-radius: 100%; position: absolute; top: 10px; right: 10px; z-index: 100;}
+.available{background: #00FF08;}
+.notavailable{background: #f00;}
+
+
+
+/* inner pages css here */
+.aboutuspage {margin-top: 50px;}
+.contactuspage, .employmentpage, .bookingpage{ padding:0px 10%; margin-top: 50px;}
+.c_form_box, .emp_form_box{ background: #fff; padding: 30px 80px; position: relative;}
+.c_form_box input, .c_form_box textarea, .emp_form_box input, .emp_form_box textarea{ resize: none; display: block; margin-top: 25px; padding: 10px; width: 100%; outline: none;}
+.c_form_box input[type="submit"], .emp_form_box input[type="submit"]{ background: #D9B155; color: #fff; font-size: 20px; font-weight: 700; text-transform: uppercase; border: none;}
+.c_info_box, .booking_mobels_box{ background: #D9B155; margin-left: -25px; padding: 30px; position: relative; height: 524px;}
+.c_info_box h4, .booking_mobels_box h4{ background: #fff; padding: 10px; margin-bottom: 30px;}
+.c_info_box .c_call, .c_info_box .c_mail{ padding: 10px 10px 10px 25px; color: #fff; font-size: 20px; font-weight: 700;
+  line-height: 25px;}
+  .c_info_box .c_call a, .c_info_box .c_mail a{ color: #fff; text-decoration: none;}
+  .c_info_box .c_call{background: url(../public/images/f-phone.svg) left 16px no-repeat; } 
+.c_info_box .c_mail{ font-size: 16px; background: url(../public/images/f-email.svg) left 18px no-repeat;}
+
+.c_form_box::after, .c_info_box::after, .booking_mobels_box::after{ width: 50px; height: 20px; border-radius: 100px; position: absolute; content: ''; z-index: 700;}
+.c_form_box::after, .booking_mobels_box::after{ background: #fff; right: -30px; top: 270px;}
+.c_info_box::after{background: #D9B155; left: -30px; top: 320px;}
+
+.employmentpage .emp_form_box input[type="file"], .booking_mobels_box select{display: block; margin-top: 25px; padding: 10px; width: 100%; outline: none; border: #999 solid 1px;}
+.booking_mobels_box{ margin-left: 0px; margin-right: -25px; height: 800px;}
+.booking_mobels_box select{ margin-bottom: 20px; background: #fff;}
+.bookingpage .c_form_box::after{left: -20px; top: 320px; background: #d9b155;}
+
+/* hide on desktop and show on mobile css here */
+.menuopen, .menuclose, .read_more { display: none;}
+
+
+
+
+@media (max-width: 900px) {
+  .thumouterbox{ width: 178px;}
+  .thumouterbox .picbox{ height: 250px;}
+}
+
+
+@media (max-width: 600px) {
+.grid {width: 100%;flex-direction: column;}
+
+
+.logo{ position: static; width: 125px; margin: 0px;} 
+.topquickinfo{ display: none;}
+.h_textinfo p{ height: 50px; overflow: hidden;}
+.menuopen, .read_more{ display:block;}
+.menuopen, .menuclose{position: absolute; top: 0px; right: 0px; height: 60px; width: 60px; border: none; }
+.menuopen{background: #D9B155 url(../public/images/menus-mobile-icon.png) center no-repeat;}
+.menuclose{background: #fff; display: block;}
+.topmenu ul{ width: 100%; float: none !important; text-align: left; padding: 0px;}
+.topmenu ul:nth-child(2n){ margin: 0px;}
+.topmenu ul li{ display: block;}
+.blank{ display: none;}
+
+.read_more a{ font-size: 18px; font-weight: 700; color: #D9B155; display:block; padding-bottom: 10px;}
+.thumouterbox{ position: static; width: 100%; margin: 0px 0px 20px 0px;}
+.thumouterbox .picbox{ height:394px !important; overflow: hidden;}
+.thumouterbox .picbox img{ width: 400px!important;}
+
+
+.h_thumnanils .fillterbox::before{ display: none;}
+.footer{ padding-top: 10px;}
+.fotinfro, .fotlinks{ width: 100%; padding: 20px 0px;}
+.fotlinks ul{ column-count: 2;}
+
+
+/*
+.thumouterbox{width: 100%; margin: 0px 0px 20px 0px;}
+.picbox{ height: 100% !important;} .picbox img{ width: 100%;}
+*/
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
