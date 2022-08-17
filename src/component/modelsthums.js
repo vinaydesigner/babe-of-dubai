@@ -7,7 +7,7 @@ const Modelsthums = () => {
     <div className={styles.heading_shorby}>Shor by</div>
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} layout="responsive" />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="joy" layout="responsive" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -22,7 +22,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="sunny" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -37,7 +37,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="lora" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -52,7 +52,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="bib" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -67,7 +67,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="nora" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -82,7 +82,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="saya" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -97,7 +97,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="maya" />
         </div>
         <div className={styles.modelsname}>
             Model Name
@@ -112,7 +112,7 @@ const Modelsthums = () => {
 
     <div className={styles.thumouterbox}>
         <div className={styles.picbox}>
-            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} />
+            <Image src="/images/models_thumbnails/demopic.jpg" width={270} height={380} alt="pitna" />
         </div>
         <div className={styles.modelsname}>
             Model Name

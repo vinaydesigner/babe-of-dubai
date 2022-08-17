@@ -23,7 +23,7 @@ export default function Home() {
         <h1>Dubai Escorts</h1>
         <p>To meet hot blonde, brunette, busty and curvy companions as early as tonight from AED150/hour, check out our full selection of London escorts. Browse our online gallery and find everything from European models, exotic Brazilians, Russian girls and British babes; each with a comprehensive profile of photos (including selfies and videos), descriptions, statistics, services, rates and verified reviews! To book incall or outcall escorts in Dubai, call (+44) 07831 475881.</p>
         <span className={styles.read_more} ><Link href={'/aboutus'}> Read more +</Link></span>
-        <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
+        <Image src='/images/hori_golden_line.svg' alt='line' layout='responsive' width={1366} height={5} />
       
         <Container fluid className={styles.h_thumnanils}>
           <Row>
