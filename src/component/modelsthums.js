@@ -26,8 +26,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -41,8 +41,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -56,8 +56,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -71,8 +71,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -86,8 +86,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -101,8 +101,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>
@@ -116,8 +116,8 @@ const Modelsthums = () => {
         </div>
         <div className={styles.modelsname}>
             Model Name
-            <span><Image src="/images/selfie.svg" width={20} height={20} /></span>
-            <span><Image src="/images/video.svg" width={20} height={20} /></span>
+            <span><Image src="/images/selfie.svg" width={20} height={20} alt="selfie icon" /></span>
+            <span><Image src="/images/video.svg" width={20} height={20} alt="video icon" /></span>
         </div>
         <div className={styles.modelslocation}>
             <span>Location</span>

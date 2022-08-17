@@ -23,7 +23,7 @@ export default function Home() {
         <h1>Dubai Escorts</h1>
         <p>To meet hot blonde, brunette, busty and curvy companions as early as tonight from AED150/hour, check out our full selection of London escorts. Browse our online gallery and find everything from European models, exotic Brazilians, Russian girls and British babes; each with a comprehensive profile of photos (including selfies and videos), descriptions, statistics, services, rates and verified reviews! To book incall or outcall escorts in Dubai, call (+44) 07831 475881.</p>
         <span className={styles.read_more} ><Link href={'/aboutus'}> Read more +</Link></span>
-        <Image src='/images/hori_golden_line.svg' alt='line' layout='responsive' width={1366} height={5} />
+        <Image src="/images/hori_golden_line.svg" alt="line" layout="responsive" width={1366} height={5} />
       
         <Container fluid className={styles.h_thumnanils}>
           <Row>
@@ -38,7 +38,7 @@ export default function Home() {
 
         <h2>About Dubai Escorts</h2>
         <p>Dubai escorts are call girls who sell their time and companionship to gentlemen seeking the services of hot escort girls.</p>
-        <p>Dubai escorts are ladies who make clients feel the ultimate pleasure of unloading all of the tension and stress they feel from their day to day lives. These escorts know how to use their charm, intelligence, personality and certainly their appearance to treat clients to a no strings attached date with delves into the pleasure of human contact and companionship, Escorts in Dubai are a shoulder to cry on, someone to speak to about how your day has been, company when you are feeling lonely and the perfect date for when you are feeling horny and up for some fun in the capital. These ladies are capable of everything and more, going the extra mile to ensure every client they meet has an amazing time whether they are in London on business, a holiday or living in one of the world's most exciting cities.</p>
+        <p>Dubai escorts are ladies who make clients feel the ultimate pleasure of unloading all of the tension and stress they feel from their day to day lives. These escorts know how to use their charm&apos; intelligence&apos; personality and certainly their appearance to treat clients to a no strings attached date with delves into the pleasure of human contact and companionship&apos; Escorts in Dubai are a shoulder to cry on&apos; someone to speak to about how your day has been&apos; company when you are feeling lonely and the perfect date for when you are feeling horny and up for some fun in the capital. These ladies are capable of everything and more&apos; going the extra mile to ensure every client they meet has an amazing time whether they are in London on business&apos; a holiday or living in one of the worlds most exciting cities.</p>
         <p>To learn more about the best escorts Dubai has available to gentlemen, be sure to continue reading what are Dubai escort agency has to say about the local call girls in the city.</p>
       
         <h3>Choose from hundreds of escorts in Dubai you can meet today</h3>
@@ -47,7 +47,7 @@ export default function Home() {
           <li>The ladies that you see in our gallery are all genuine female escorts in Dubai as we operate a 100% no false pictures policy.</li>
           <li>These ladies come from alll over the world, from local British girls to Eastern European models from countries such as Romania.</li>
           <li>With different colour hair, body types, breast size and personalities, everyone here at Rachaels Dubai escorts is sure you will find the companion you are searching for.</li>
-          <li>All you need to do nowis click on the girl's profile picture and enjoy your browsing experience.</li>
+          <li>All you need to do nowis click on the girls profile picture and enjoy your browsing experience.</li>
         </ul>
 
         <h3>How to book one of the sexiest escorts Dubai has to offer</h3>

@@ -8,7 +8,7 @@ const employment = () => {
     <>
         <div className={styles.h_textinfo}>
             <h1>Employment</h1>
-            <p>If you would like to join us then you've come to the right place.</p>
+            <p>If you would like to join us then youve come to the right place.</p>
             <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
             <Container fluid className={styles.employmentpage}>
                 <Row>
