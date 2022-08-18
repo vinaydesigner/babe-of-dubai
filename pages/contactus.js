@@ -4,57 +4,57 @@ import {Container, Row, Col, Form} from 'react-bootstrap';
 import { useState } from 'react';
 
 const contactus = () => {
-    //  const [username, setUsername]=useState("");
-    //  const [email, setEmail]=useState("");
-    //  const [pass, setPass]=useState("");
-    // const [nameErr, setNameErr]=useState("");
-    // const [emailErr, setEmailErr]=useState("");
-    // const [passErr, setPassErr]=useState("");
+    const [username, setUsername]=useState("");
+    const [email, setEmail]=useState("");
+    const [pass, setPass]=useState("");
+    const [nameErr, setNameErr]=useState("");
+    const [emailErr, setEmailErr]=useState("");
+    const [passErr, setPassErr]=useState("");
 
-    // function contactHandle(e)
-    // {
-    //     e.preventDefault()
-    // }
+    function contactHandle(e)
+    {
+        e.preventDefault()
+    }
 
-    // function usernameHandle(e)
-    // {
-    //     let item=e.target.value;
-    //     if(item.length<3)
-    //     {
-    //         setNameErr(true)
-    //     }
-    //     else
-    //     {
-    //         setNameErr(false)
-    //     }
-    // } 
+    function usernameHandle(e)
+    {
+        let item=e.target.value;
+        if(item.length<3)
+        {
+            setNameErr(true)
+        }
+        else
+        {
+            setNameErr(false)
+        }
+    } 
 
-    // function emailHandle(e)
-    // {
-    //     let item=e.target.value;
-    //     if(item.length<5)
-    //     {
-    //         setEmailErr(true)
-    //     }
-    //     else
-    //     {
-    //         setEmailErr(false)
-    //     }
-    // }
+    function emailHandle(e)
+    {
+        let item=e.target.value;
+        if(item.length<5)
+        {
+            setEmailErr(true)
+        }
+        else
+        {
+            setEmailErr(false)
+        }
+    }
 
 
-    // function passHandle(e)
-    // {
-    //     let item=e.target.value;
-    //     if(item.length<10)
-    //     {
-    //         setPassErr(true)
-    //     }
-    //     else
-    //     {
-    //         setPassErr(false)
-    //     }
-    // }
+    function passHandle(e)
+    {
+        let item=e.target.value;
+        if(item.length<10)
+        {
+            setPassErr(true)
+        }
+        else
+        {
+            setPassErr(false)
+        }
+    }
     
 
   return (
@@ -69,10 +69,10 @@ const contactus = () => {
                         <Col xs={12} lg={8} md={8}>
                             <div className={styles.c_form_box}>
                                 <h4>Want us to contact you</h4>
-                                <form>
-                                    <input type="text" placeholder='Full name' ></input>
-                                    <input type="email" placeholder='Email address' ></input> 
-                                    <input type="password" placeholder='Password' ></input> 
+                                <form onSubmit={contactHandle}>
+                                    <input type="text" placeholder='Full name' onChange={usernameHandle}></input> {nameErr?<span>Number should be at least 3 digits long.</span>:""}
+                                    <input type="email" placeholder='Email address' onChange={emailHandle}></input> {emailErr?<span>Should be used "@ and .com".</span>:""}
+                                    <input type="password" placeholder='Password' onChange={passHandle}></input> {passErr?<span>Password minimum 10 digits.</span>:""}
                                     <textarea placeholder='Message'></textarea>
                                     <input type="submit" value='Submit'></input>
                                 </form>

@@ -37,22 +37,22 @@ const Footer = () => {
                         <Link href={'/aboutus'}>About Us</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>All Escorts</Link>
+                        <Link href={'/escorts'}>All Escorts</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Duo Escorts</Link>
+                        <Link href={'/duoescorts'}>Duo Escorts</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Booking</Link>
+                        <Link href={'/booking'}>Booking</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Employment</Link>
+                        <Link href={'/employment'}>Employment</Link>
                     </li>
                     <li>
                         <Link href={'/'}>Review</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>FAQ’s</Link>
+                        <Link href={'/faqs'}>FAQ’s</Link>
                     </li>
                     <li>
                         <Link href={'/'}>Blog/Articles</Link>
@@ -61,14 +61,14 @@ const Footer = () => {
                         <Link href={'/'}>Links</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Contact Us</Link>
+                        <Link href={'/contactus'}>Contact Us</Link>
                     </li>
                 </ul>
             </div>    
             
         </Container>   
 
-        <div className={styles.copyright}>© 2022 Luxury Dolls , All Rights Reserved Designed By Wave69</div>
+        <div className={styles.copyright}>© 2022 Luxury Dolls, All Rights Reserved Designed By <Link href="#">Wave69</Link></div>
     </footer>
     </>
   )

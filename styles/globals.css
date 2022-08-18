@@ -18,19 +18,35 @@ a {
 }
 
 
+
 /* side fillter option css here */
-.fillterbox{position: relative;}
+.fillterbox{position: relative; /*border-left: #d9b155 solid 1px; padding-left: 20px; height: 100%;*/}
 .fillterbox .fillter{ color: #fff; font-size: 20px; text-align: right; cursor: pointer; border:none; margin-bottom: 20px; background:#000;}
 .f_boder{background: transparent linear-gradient(120deg, #000000 0%, #835627 46%, #000000 100%) 0% 0% no-repeat padding-box; height: 2px; width: 100%;}
 .fillterinner .accordion, .fillterinner .accordion-item, .fillterinner .accordion-button{ background: #000 !important; border: none;}
-.fillterbox::before {width: 2px; height:450px; opacity: 1; position: absolute; left: -10px; top:50px; content: ''; z-index: 300;
+.fillterbox::before {width: 2px; height:450px; opacity: 1; position: absolute; left: -15px; top:50px; content: ''; z-index: 300;
 background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 100%) 0% 0% no-repeat padding-box;}
 .fillterinner h2.accordion-header{ margin: 0px; padding-top: 2px; background: linear-gradient(111deg, rgba(0,0,0,1) 0%, rgba(217,177,85,1) 30%, rgba(0,0,0,1) 80%);}
 .fillterinner button.accordion-button{ color: #D9B155; font-weight: 700; padding-left: 0px; padding-right: 0px; box-shadow:none; border-radius: 0 !important;}
-.fillterinner .accordion-button::after, .fillterinner .accordion-button.collapsed::after{ background: #000 url(../public/images/arrow-down.svg) 0 5px no-repeat; transform: rotate(0deg);}
+.fillterinner .accordion-button.collapsed::after,
+.faqinner .accordion-button.collapsed::after
+{ background:url(../public/images/arrow-down.svg) 0 5px no-repeat;}
+.fillterinner .accordion-button:not(.collapsed)::after,
+.faqinner .accordion-button:not(.collapsed)::after
+{background:url(../public/images/arrow-up.png) 0 5px no-repeat;}
 .fillterinner .accordion-body{ color: #fff; padding-left:0px; padding-right:0px; padding-top: 0px;}
 .fillterinner .accordion-body label{ display: block; color: #fff; font-size: 14px; font-weight: 300; margin-bottom: 15px;}
 
+.faqpage{ padding:0px 10%; margin-top: 50px;}
+.faqinner .accordion-item{ margin-bottom: 10px; border: none;}
+.faqinner h2.accordion-header button{ margin-top: 0px; font-weight:600; background-color:#f5f5f5; color: #000; }
+.faqinner .accordion-item:first-of-type .accordion-button, .faqinner .accordion-item:last-of-type .accordion-button.collapsed{ border-radius:0px !important;}
+/*.faqinner .accordion-button:not(.collapsed){ }*/
+.faqinner p{ color: #000 !important;}
+
+
+.redemore-hide{ display: none;}
+.read_more{ font-size: 16px; font-weight: 700; color: #D9B155; display:block; padding-bottom: 10px; padding-left: 0px; background:none; border: none;}
 
 
 
@@ -49,6 +65,7 @@ background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 
 @media (max-width: 600px) {
   #header{ position: relative;}
   #header::after {position: absolute; content: ''; bottom: -8px; left: 0px; right: 0px; z-index: 500; margin: 0 auto; width: 100%; height: 10px; background: #D9B155;}
+  .fillterbox::before{ display: none;}
   .fillterbox .fillter{ border: #fff solid 1px; padding: 3px 30px;}
 
 }

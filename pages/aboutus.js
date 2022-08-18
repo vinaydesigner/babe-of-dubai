@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import {Container, Row, Col} from 'react-bootstrap';
 
 
+
 const aboutus = () => {
   
   return (
@@ -18,6 +19,7 @@ const aboutus = () => {
             </Col>
             <Col xs={12} lg={7} md={7}>
               <h2>Luxury Escorts Services</h2>
+              
               <p>To meet hot blonde&apos; brunette&apos; busty and curvy companions as early as tonight from AED150/hour&apos; check out our full selection of London escorts. Browse our online gallery and find everything from European models&apos; exotic Brazilians&apos; Russian girls and British babes each with a comprehensive profile of photos (including selfies and videos)&apos; descriptions&apos; statistics&apos; services&apos; rates and verified reviews! To book incall or outcall escorts in Dubai&apos; call (+44) 07831 475881.</p>
               <p>Dubai escorts are ladies who make clients feel the ultimate pleasure of unloading all of the tension and stress they feel from their day to day lives. These escorts know how to use their charm&apos; intelligence&apos; personality and certainly their appearance to treat clients to a no strings attached date with delves into the pleasure of human contact and companionship&apos; Escorts in Dubai are a shoulder to cry on&apos; someone to speak to about how your day has been&apos; company when you are feeling lonely and the perfect date for when you are feeling horny and up for some fun in the capital. These ladies are capable of everything and more&apos; going the extra mile to ensure every client they meet has an amazing time whether they are in London on business&apos; a holiday or living in one of the worlds most exciting cities.</p>
             </Col>

@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import {Container, Row, Col} from 'react-bootstrap';
 import Fillter from '../src/component/Fillter';
 import Gallery from '../src/component/Gallery';
+import Modelsthums from '../src/component/modelsthums';
 
 const escorts = () => {
   return (
@@ -16,7 +17,7 @@ const escorts = () => {
       <Container fluid className={styles.h_thumnanils}>
           <Row>
             <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1}} md={{ span: 9, order: 1 }}>
-              <Gallery></Gallery>
+              <Modelsthums></Modelsthums>
             </Col>
             <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
               <Fillter></Fillter>

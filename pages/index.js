@@ -4,12 +4,15 @@ import Link from "next/link";
 import styles from '../styles/Home.module.css';
 import {Container, Row, Col} from 'react-bootstrap';
 import Fillter from '../src/component/Fillter';
-import Gallery from '../src/component/Gallery';
+import Modelsthums from "../src/component/modelsthums";
+import React, { useState } from 'react';
 
 
 
 
 export default function Home() {
+  const [isHidden1, setIsHidden1] = useState(true);
+
   return (
     <>
       <Head>
@@ -21,14 +24,17 @@ export default function Home() {
       
       <div className={styles.h_textinfo}>
         <h1>Dubai Escorts</h1>
-        <p>To meet hot blonde, brunette, busty and curvy companions as early as tonight from AED150/hour, check out our full selection of London escorts. Browse our online gallery and find everything from European models, exotic Brazilians, Russian girls and British babes; each with a comprehensive profile of photos (including selfies and videos), descriptions, statistics, services, rates and verified reviews! To book incall or outcall escorts in Dubai, call (+44) 07831 475881.</p>
-        <span className={styles.read_more} ><Link href={'/aboutus'}> Read more +</Link></span>
+        <p>To meet hot blonde, brunette, busty and curvy companions as early as tonight from AED150/hour, check out our full selection of London escorts. Browse our online gallery and 
+        <span className={isHidden1 ? 'redemore-hide' : null}> find everything from European models, exotic Brazilians, Russian girls and British babes; each with a comprehensive profile of photos (including selfies and videos), descriptions, statistics, services, rates and verified reviews! To book incall or outcall escorts in Dubai, call (+44) 07831 475881.</span>
+        <button className='read_more' onClick={() => setIsHidden1(!isHidden1)}> {isHidden1 ? "+ Read More" : "- Read Less"} </button>
+        </p>
         <Image src="/images/hori_golden_line.svg" alt="line" layout="responsive" width={1366} height={5} />
       
         <Container fluid className={styles.h_thumnanils}>
           <Row>
+            <div className={styles.heading_shorby}>Shor by</div>
             <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1}} md={{ span: 9, order: 1 }}>
-              <Gallery></Gallery>
+            <Modelsthums></Modelsthums>
             </Col>
             <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
               <Fillter></Fillter>

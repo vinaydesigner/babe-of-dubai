@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import {Container, Row, Col} from 'react-bootstrap';
-import Gallery from '../src/component/Gallery';
+import Modelsthums from '../src/component/modelsthums';
 
 
 const duoescorts = () => {
@@ -15,7 +15,7 @@ const duoescorts = () => {
       <Container className={styles.h_thumnanils}>
           <Row>
             <Col xs={12} lg={12} md={12}>
-              <Gallery></Gallery>
+            <Modelsthums></Modelsthums>
             </Col>
           </Row>
         </Container>
