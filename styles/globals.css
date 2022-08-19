@@ -39,10 +39,12 @@ background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 
 
 .faqpage{ padding:0px 10%; margin-top: 50px;}
 .faqinner .accordion-item{ margin-bottom: 10px; border: none;}
+.faqinner .accordion-header { margin-top: 0px;}
 .faqinner h2.accordion-header button{ margin-top: 0px; font-weight:600; background-color:#f5f5f5; color: #000; }
 .faqinner .accordion-item:first-of-type .accordion-button, .faqinner .accordion-item:last-of-type .accordion-button.collapsed{ border-radius:0px !important;}
 /*.faqinner .accordion-button:not(.collapsed){ }*/
 .faqinner p{ color: #000 !important;}
+
 
 
 .redemore-hide{ display: none;}

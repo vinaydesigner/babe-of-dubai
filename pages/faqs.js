@@ -19,7 +19,7 @@ const faqs = () => {
                                 <Accordion.Header> What information do I need to provide to book an escort? </Accordion.Header>
                                 <Accordion.Body>
                                 <p>When you book incall escort services&apos; we require your name and contact number. For outcall escort services&apos; we require your name and the full address of the location. In case you are inviting the escort to your hotel room&apos; we need the room number.</p>
-                                <p>Top 10 Babes Escort is completely compliant with the privacy laws in the UK and we take measures to protect your information. We do not sell or share your information with a third party.</p>
+                                <p>Babe of Dubai is completely compliant with the privacy laws in the UK and we take measures to protect your information. We do not sell or share your information with a third party.</p>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">

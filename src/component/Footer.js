@@ -49,16 +49,16 @@ const Footer = () => {
                         <Link href={'/employment'}>Employment</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Review</Link>
+                        <Link href={'/reviews'}>Reviews</Link>
                     </li>
                     <li>
                         <Link href={'/faqs'}>FAQ’s</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Blog/Articles</Link>
+                        <Link href={'/blog'}>Blog/Articles</Link>
                     </li>
                     <li>
-                        <Link href={'/'}>Links</Link>
+                        <Link href={'/links'}>Links</Link>
                     </li>
                     <li>
                         <Link href={'/contactus'}>Contact Us</Link>
