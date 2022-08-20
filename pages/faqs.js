@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import {Container, Row, Col, Accordion} from 'react-bootstrap';
 
@@ -9,7 +9,7 @@ const faqs = () => {
     <>
         <div className={styles.h_textinfo}>
             <h1>FAQ&ldquo;s</h1>
-            <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
+            <Image src="/images/hori_golden_line.svg" alt="hline" layout='responsive' width={1366} height={5} />
             <Container fluid className='faqpage'>
                 <Row>
                     <Col xs={12} lg={12} md={12}>
