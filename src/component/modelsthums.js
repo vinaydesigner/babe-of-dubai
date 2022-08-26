@@ -1,3 +1,5 @@
+//"/escorts/modelsdetails" //
+
 import React from "react";
 import Image from "next/image"
 import styles from '../../styles/Home.module.css';
@@ -62,7 +64,7 @@ const Modelsthums = (props) => {
     <>
     {Modeldata.map((Modeldata, i) => (
         <div className={styles.thumouterbox} key={i}>
-        <Link href="">    
+        <Link href={`/escorts/${Modeldata.slug}`}>    
         <div className={styles.picbox}>
             <Image 
             src={Modeldata.mpic} 
@@ -95,7 +97,7 @@ const Modelsthums = (props) => {
             <span>AUD {Modeldata.mprice}</span>
         </div>
         
-    </div>
+        </div>
     ))}
     
 

@@ -19,6 +19,16 @@ a {
 
 
 
+/* top menu  css here */
+.topmenu { display: block;  
+  background: linear-gradient(111deg, rgba(131,86,39,1) 0%, rgba(217,177,85,1) 35%, rgba(131,86,39,1) 100%); padding: 0px 20px; text-align: center;}
+.topmenu ul{ margin: 10px 0px; /*float: left;*/ padding: 0px;} 
+/*.topmenu ul:nth-child(2n){ margin: 10px 0px; float: right; padding: 0px;}*/
+.topmenu ul li{ display: inline-block;}
+.topmenu ul li a{ font-size: 16px; color: #fff; text-decoration:none; padding:12px 20px; line-height: 13px; display:block; white-space: nowrap;}
+.topmenu ul li a:hover{ background: #000; border-radius: 100px;} 
+
+
 /* side fillter option css here */
 .fillterbox{position: relative; /*border-left: #d9b155 solid 1px; padding-left: 20px; height: 100%;*/}
 .fillterbox .fillter{ color: #fff; font-size: 20px; text-align: right; cursor: pointer; border:none; margin-bottom: 20px; background:#000;}
@@ -37,15 +47,57 @@ background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 
 .fillterinner .accordion-body{ color: #fff; padding-left:0px; padding-right:0px; padding-top: 0px;}
 .fillterinner .accordion-body label{ display: block; color: #fff; font-size: 14px; font-weight: 300; margin-bottom: 15px;}
 
+
+
 .faqpage{ padding:0px 10%; margin-top: 50px;}
-.faqinner .accordion-item{ margin-bottom: 10px; border: none;}
-.faqinner .accordion-header { margin-top: 0px;}
-.faqinner h2.accordion-header button{ margin-top: 0px; font-weight:600; background-color:#f5f5f5; color: #000; }
-.faqinner .accordion-item:first-of-type .accordion-button, .faqinner .accordion-item:last-of-type .accordion-button.collapsed{ border-radius:0px !important;}
+.faqinner .accordion-item, .modelsdetails_innerbox .accordion-item{ margin-bottom: 10px; border: none;}
+.faqinner .accordion-header, .modelsdetails_innerbox .accordion-header { margin-top: 0px;}
+.faqinner h2.accordion-header button, .modelsdetails_innerbox h2.accordion-header button{ margin-top: 0px; font-weight:600; background-color:#f5f5f5; color: #000; }
+.faqinner .accordion-item:first-of-type .accordion-button, .faqinner .accordion-item:last-of-type .accordion-button.collapsed,
+.modelsdetails_innerbox .accordion-item:first-of-type .accordion-button, .modelsdetails_innerbox .accordion-item:last-of-type .accordion-button.collapsed
+{ border-radius:0px !important;}
 /*.faqinner .accordion-button:not(.collapsed){ }*/
 .faqinner p{ color: #000 !important;}
 
 
+.md_linksof_video_selfi{ margin-bottom: 30px;}
+.md_linksof_video_selfi button, .md_linksof_video_selfi button:hover, .md_linksof_video_selfi button:focus{ outline: none; position: relative; font-size: 16px; color: #fff; text-decoration: none; background: #664f1a; border-radius: 20px; padding: 7px 20px 7px 30px; margin-right: 10px; border: 0px;}
+.md_linksof_video_selfi button:first-child::after{ background: url(../public/images/video.svg) no-repeat; background-size: cover; width: 16px; height: 16px; content: ''; position: absolute; z-index: 800; top:10px; left: 10px;}
+.md_linksof_video_selfi button:nth-child(2n)::before{ background: url(../public/images/selfie.svg) no-repeat; background-size: cover; width: 18px; height: 18px; content: ''; position: absolute; z-index: 800; top:10px; left: 10px;}
+
+
+.modelsdetails_innerbox .md_title, .md_title{ font-size: 32px; font-weight: 600; color: #fff !important; margin-bottom: 70px; margin-top: 0px !important;}
+.modelsdetails_innerbox .md_title span, .modelsdetailspage .md_title span{ float: right; font-size: 16px;}
+.modelsdetails_innerbox .accordion-item{ background-color: #000;}
+.modelsdetails_innerbox h2.accordion-header button{ background-color: #000; color: #fff; padding:10px 0px 5px 0px; border-bottom: #333 solid 1px;
+box-shadow: none; font-size: 20px; font-weight: 400;}
+.modelsdetails_innerbox .accordion-body{ padding: 20px 0px 30px 0px;}
+.modelsdetails_innerbox .md_stats{ overflow: hidden;}
+.modelsdetails_innerbox .md_stats li{ font-size: 13px; padding: 10px; width: 120px; height: 120px; background-color: #333; float: left; text-align: center; margin:0px 15px 15px 0px; border-radius: 5px;}
+.modelsdetails_innerbox .md_stats li strong{ font-size: 15px; font-weight: 700; line-height: 18px; display: block; padding-top: 25px;}
+.modelsdetails_innerbox .md_stats li::before, .modelsdetails_innerbox .md_rates li::before, .modelsdetails_innerbox .md_review li::before{display: none;}
+
+.modelsdetails_innerbox .md_rates li:first-child span{ font-weight: 700;}
+.modelsdetails_innerbox .md_rates span{ width: 33%; display: inline-block; padding: 5px 0px;}
+
+.modelsdetails_innerbox .md_location span, .modelsdetails_innerbox .md_whatlike span{ border: #707070 solid 1px; padding: 10px 25px; border-radius: 4px; margin: 0px 10px 10px 0px; color: #fff; display: inline-block;}
+
+.modelsdetails_innerbox .md_booknow:first-child{ background: url(../public/images/f-phone.svg) no-repeat 0px 10px; padding-left: 20px; font-size: 20px;}
+.modelsdetails_innerbox .md_booknow a:first-child {color: #fff; text-decoration: none;}
+.modelsdetails_innerbox .md_booknow a:last-child{ background: #D9B155; color: #fff; text-decoration: none; padding: 5px 30px 8px 30px; margin-left: 50px;}
+.modelsdetails_innerbox .md_booknow a:last-child:hover{opacity: 0.9;}
+
+.modelsdetails_innerbox .md_review a, 
+.modelsdetails_innerbox .md_review a:hover{font-size: 20px; color: #D9B155; text-decoration: none; margin-bottom: 30px; display: inline-block;}
+.modelsdetails_innerbox .md_review .rw_date{ float: right;}
+
+.modelsdetails_innerbox .accordion-button.collapsed::after
+{ background:url(../public/images/down-arrow.png) 0 5px no-repeat;}
+.modelsdetails_innerbox .accordion-button:not(.collapsed)::after
+{background:url(../public/images/down-arrow.png) 0 5px no-repeat;}
+
+.mobile{ display: none;}
+.fillter{ display: none;}
 
 .redemore-hide{ display: none;}
 .read_more{ font-size: 16px; font-weight: 700; color: #D9B155; display:block; padding-bottom: 10px; padding-left: 0px; background:none; border: none;}
@@ -67,7 +119,22 @@ background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 
 @media (max-width: 600px) {
   #header{ position: relative;}
   #header::after {position: absolute; content: ''; bottom: -8px; left: 0px; right: 0px; z-index: 500; margin: 0 auto; width: 100%; height: 10px; background: #D9B155;}
-  .fillterbox::before{ display: none;}
+  .fillterbox::before, .md_title{ display: none;}
   .fillterbox .fillter{ border: #fff solid 1px; padding: 3px 30px;}
+  .topmenu, .fillterinner{ display: none;}
+  .topmenu.active, .fillterinner.active, .fillterbox .fillter{display: block;}
+  .topmenu ul li{ display: block; text-align: left;}
+
+  .fillterinner.active .accordion {
+    position: absolute;
+    width: 100%;
+    height: 100pc;
+    z-index: 500;
+    left: 0px;
+    margin-left: 0px;
+    padding-bottom: 30px;
+  }
+  .md_title.mobile{ display: block; font-size: 24px; margin-bottom: 20px;} .md_title.mobile span{ font-size: 15px; float: right; margin-top: 8px;}
+
 
 }

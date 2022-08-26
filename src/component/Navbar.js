@@ -8,7 +8,7 @@ import React from "react";
 
 const Navbar = () => {
 
-  const [status, setStatus]=React.useState (true)
+  const [status, setStatus]=React.useState (false)
 
   return (
     <>
@@ -32,12 +32,8 @@ const Navbar = () => {
           </div>
         
           
-          <button className={styles.menuopen} onClick={()=>setStatus(true)}></button>
-          
-          {
-          status? 
-          <div className={styles.topmenu}>
-            <button className={styles.menuclose} onClick={()=>setStatus(false)}>Close</button>
+          <button className={styles.menuopen} onClick={()=>setStatus(!status)}></button>
+          <div className={`topmenu ${status? 'active':''}`}>
             <ul>
                 <li>
                     <Link href={'/'}>Home</Link>
@@ -52,8 +48,7 @@ const Navbar = () => {
                     <Link href={'/duoescorts'}>Duo Escorts</Link>
                 </li>
                 
-                <li className={styles.blank}>
-                </li>
+                <li className={styles.blank}></li>
                 
                 <li>
                     <Link href={'/booking'}>Booking</Link>
@@ -69,8 +64,7 @@ const Navbar = () => {
                 </li>
             </ul>
           </div>
-          :null
-          }
+          
           </Row>
         </Container>      
       </header>

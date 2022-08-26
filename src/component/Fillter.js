@@ -6,18 +6,16 @@ import React from "react";
 
 
 const Fillter = () => {
-  
-    const [status, setStatus]=React.useState (true)
+      const [status, setStatus]=React.useState (false)
     
 return (
     <>
     <div className='fillterbox'>
         <button className="fillter" onClick={()=>setStatus(!status)}>
-        <Image src="/images/filter_icon.png" alt="filter" width={16} height={16} /> Fillter
+            <Image src="/images/filter_icon.png" alt="filter" width={16} height={16} /> Fillter
         </button>
-        {
-        status?
-        <div className='fillterinner'>
+        
+        <div className={`fillterinner ${status? 'active':''}`}>
             <Accordion defaultActiveKey={['0']} >
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>By Price</Accordion.Header>
@@ -63,8 +61,6 @@ return (
                 </Accordion.Item>
             </Accordion> 
         </div>
-        :null
-        }
     </div>   
     </>
   )

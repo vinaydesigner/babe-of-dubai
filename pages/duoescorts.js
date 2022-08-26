@@ -15,7 +15,7 @@ const duoescorts = () => {
       <Container className={styles.h_thumnanils}>
           <Row>
             <Col xs={12} lg={12} md={12}>
-            <Modelsthums></Modelsthums>
+              <Modelsthums></Modelsthums>
             </Col>
           </Row>
         </Container>

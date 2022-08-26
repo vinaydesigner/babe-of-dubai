@@ -107,13 +107,7 @@
 .topquickinfo .topcall span{ font-size: 10px; display: block; line-height: 12px; text-transform: uppercase;}
 .topquickinfo .topwhatapps{background: url(../public/images/whatsapp_icon.svg) no-repeat 0px 0px; padding-left: 45px; padding-bottom: 12px; padding-right:20px; line-height: 30px; float: right;}
 .topquickinfo .toptelegram{background: url(../public/images/telegram_icon.svg) no-repeat 0px 0px; padding-left: 45px; padding-bottom: 12px; line-height: 30px; float: right;}
-.topmenu  { /*background: rgb(131,86,39);*/ display: block;  
-  background: linear-gradient(111deg, rgba(131,86,39,1) 0%, rgba(217,177,85,1) 35%, rgba(131,86,39,1) 100%); padding: 0px 20px; text-align: center;}
-.topmenu ul{ margin: 10px 0px; /*float: left;*/ padding: 0px;} 
-/*.topmenu ul:nth-child(2n){ margin: 10px 0px; float: right; padding: 0px;}*/
-.topmenu ul li{ display: inline-block;}
-.topmenu ul li a{ font-size: 16px; color: #fff; text-decoration:none; padding:12px 20px; line-height: 13px; display:block; white-space: nowrap;}
-.topmenu ul li a:hover{ background: #000; border-radius: 100px;} 
+
 .blank{ width: 34%;}
 
 
@@ -173,7 +167,7 @@ padding: 7px 10px; color: #fff; font-size: 14px; font-weight: 700;}
 
 
 /* inner pages css here */
-.aboutuspage, .linkspage, .reviewpage {margin-top: 50px;}
+.aboutuspage, .linkspage, .reviewpage, .bloglistpage, .modelsdetailspage {margin-top: 50px;}
 .contactuspage, .employmentpage, .bookingpage{ padding:0px 10%; margin-top: 50px;}
 .c_form_box, .emp_form_box{ background: #fff; padding: 30px 80px; position: relative;}
 .c_form_box input, .c_form_box textarea, .emp_form_box input, .emp_form_box textarea, .c_form_box select{ resize: none; display: block; margin-top: 25px; padding: 10px; width: 100%; outline: none; background: #fff; border-radius: 0px; border:#979797 solid 1px; color: #666;}
@@ -201,8 +195,21 @@ padding: 7px 10px; color: #fff; font-size: 14px; font-weight: 700;}
 .reviewlink a{ background: #D9B155; color: #000; padding:5px 15px; margin-top: 10px; display:inline-block; font-size: 13px; font-weight: 700; text-decoration: none;}
 
 .linkcodearea textarea{ width: 50%; border:none; padding: 10px; resize: none;}
+.bloglistpage .bloginnerbox{ border: #333 solid 1px; padding: 10px; margin-bottom: 20px;}
+.bloginnerbox .blogpic{ overflow: hidden; cursor: pointer;}
+.bloginfo h5{ cursor: pointer; font-size: 20px; font-weight: 600; color: #D9B155; margin-top: 20px; height: 50px; overflow: hidden;}
+.bloginfo p{ color: #fff; line-height: 22px; height: 140px; overflow: hidden;}
+.bloginfo p a{ display: block; color: #D9B155; font-size: 14px;}
+.bloginfo span{font-size:12px; color:#fff; }
+.bloginfo ul li{ line-height: 20px;}
+.bloglistpage h5, .bloglistpage p{ height: auto;}
+
+
+
+
 
 /* hide on desktop and show on mobile css here */
+
 .menuopen, .menuclose { display: none;}
 
 
@@ -234,7 +241,7 @@ padding: 7px 10px; color: #fff; font-size: 14px; font-weight: 700;}
 
 .logo{ position: static; width: 125px; margin: 0px;} 
 .topquickinfo{ display: none;}
-.h_textinfo p{ height: 50px; overflow: hidden;}
+.menuopen{ display: block;}
 .menuopen, .menuclose{position: absolute; top: 0px; right: 0px; height: 60px; width: 60px; border: none; }
 .menuopen{background: #D9B155 url(../public/images/menus-mobile-icon.png) center no-repeat;}
 .menuclose{background: #fff; display: block;}
@@ -253,6 +260,18 @@ padding: 7px 10px; color: #fff; font-size: 14px; font-weight: 700;}
 .footer{ padding-top: 10px;}
 .fotinfro, .fotlinks{ width: 100%; padding: 20px 0px;}
 .fotlinks ul{ column-count: 2;}
+
+.bookingpage{ padding: 0px;}
+.booking_mobels_box, .employmentpage, .contactuspage{ margin-right: 0px; padding: 0px;}
+.booking_mobels_box::after, .employmentpage::after, .c_form_box::after, .c_info_box::after{ display: none;}
+.contactuspage .c_info_box{ margin-left: 0px; padding: 20px; margin-top: 50px;}
+.c_form_box, .emp_form_box{ padding: 5px 20px 40px 20px;}
+.reviewpage .reviewlisting{ padding: 10px;}
+.reviewpage .reviewlink a{ padding: 5px 10px;}
+.reviewlisting p{ font-size: 15px;}
+.reviewlisting p strong{ display: block; font-size: 12px; letter-spacing: 0px; line-height: 15px;}
+
+.linkcodearea textarea{ width: 100%;}
 
 
 /*

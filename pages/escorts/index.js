@@ -1,10 +1,9 @@
 
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import {Container, Row, Col} from 'react-bootstrap';
-import Fillter from '../src/component/Fillter';
-import Gallery from '../src/component/Gallery';
-import Modelsthums from '../src/component/modelsthums';
+import Fillter from '../../src/component/Fillter';
+import Modelsthums from '../../src/component/modelsthums';
 
 const escorts = () => {
   return (
