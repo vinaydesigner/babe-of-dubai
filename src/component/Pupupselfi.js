@@ -40,7 +40,7 @@ function Example() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <iframe width="100%" height="430" src="https://www.youtube.com/embed/gFY4vRNmMeA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="430" src="https://www.youtube.com/embed/gFY4vRNmMeA" alt="video" title="YouTube video player"></iframe>
         </Modal.Body>
       </Modal>
       </div>

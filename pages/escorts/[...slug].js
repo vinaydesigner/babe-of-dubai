@@ -30,7 +30,7 @@ const modelsdetails = () => {
                                     <div className='md_stats'>
                                         <ul>
                                             <li><strong>25</strong> Age</li>
-                                            <li><strong>5'4"</strong> Height</li>
+                                            <li><strong>5&apos; 4&#39;</strong> Height</li>
                                             <li><strong>White</strong> Hair Colour</li>
                                             <li><strong>Black</strong> Eye Colour</li>
                                             <li><strong>Eastern</strong> Eye Colour</li>
@@ -46,13 +46,13 @@ const modelsdetails = () => {
                                 <Accordion.Header> About Me </Accordion.Header>
                                 <Accordion.Body>
                                     <div className='md_aboutme'>
-                                        <p>Likes; ws (giving), stripping and lap dancing, dinner dates, massage, foot worship, party,Mce sitting, 69, owo</p>
-                                        <p>Uniforms; naughjity schoolgirl, sexy secretary, fitness, latex.</p>
+                                        <p>Likes ws giving stripping and lap dancing dinner dates massage foot worship party Mce sitting 69 owo</p>
+                                        <p>Uniforms naughjity schoolgirl sexy secretary fitness latex.</p>
                                         <p>This is a Bridget profile here at Babes of Dubai</p>
-                                        <p>Bridget is a 24-year-old blonde babe who joins us from Eastern Europe, this sexy beautiful lady has natural 34C boobs, stands at SUR and . perfect English.</p>
+                                        <p>Bridget is a 24-year-old blonde babe who joins us from Eastern Europe this sexy beautiful lady has natural 34C boobs stands at SUR and perfect English.</p>
                                         <p>Bridget is a Dream come true!</p>
-                                        <p>You will see from her professional pictures just what a sexy curvy figure this lady has, you will see from her gorgeous selfie just how naughty she loo.- can you imagine this sexy blonde dress. as a secretary, popping up f rorn under your desk to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>
-                                        <p>You will see from her professional pictures just what a sexy curvy figure this lady has, you will see from her gorgeous selfie just how naughty she loo.- can you imagine this sexy blonde dress. as a secretary, popping up f rorn under your desk If you have never book. time with an escort before then do please read our guide to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>    
+                                        <p>You will see from her professional pictures just what a sexy curvy figure this lady has you will see from her gorgeous selfie just how naughty she loo can you imagine this sexy blonde dress. as a secretary popping up f rorn under your desk to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>
+                                        <p>You will see from her professional pictures just what a sexy curvy figure this lady has you will see from her gorgeous selfie just how naughty she loo can you imagine this sexy blonde dress. as a secretary popping up f rorn under your desk If you have never book. time with an escort before then do please read our guide to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>    
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
