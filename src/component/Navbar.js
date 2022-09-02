@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/Link";
 import Image from "next/image";
 import {Container, Row, Button} from "react-bootstrap";
 import styles from '../../styles/Home.module.css';
@@ -9,6 +9,7 @@ import React from "react";
 const Navbar = () => {
 
   const [status, setStatus]=React.useState (false)
+  
 
   return (
     <>

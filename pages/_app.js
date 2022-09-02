@@ -4,13 +4,12 @@ import Layout from '../src/component/layout';
 
 
 function MyApp({ Component, pageProps }) {
-  
-  return ( <>
-   
+
+  return (<>
     <Layout>
       <Component {...pageProps} />
     </Layout>
-    </>
+  </>
   )
 
 }
