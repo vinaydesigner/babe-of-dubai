@@ -3,16 +3,24 @@ import Footer from './Footer';
 
 
 
-
-export default function Layout({ children }) {
+const layout = ({children}) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+        <main>{children}</main>
       <Footer />
     </>
   )
 }
+
+export default layout
+
+
+// export default function Layout({ children }) {
+//   return (
+    
+//   )
+// }
 
 
 
