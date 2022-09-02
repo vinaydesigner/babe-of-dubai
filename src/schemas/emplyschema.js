@@ -1,4 +1,4 @@
-import * as Yup from "Yup";
+import *as Yup from 'yup'
 
 // this validaiton for employment page form start here //
 export const employmentSchemas = Yup.object({

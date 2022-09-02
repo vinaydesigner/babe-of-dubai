@@ -1,4 +1,4 @@
-import * as Yup from "Yup";
+import *as Yup from 'yup'
 // this validaiton for contact us page form start here //
 export const contacSchemas = Yup.object({
     first_name: Yup.string().min(3).max(30).required("Use your full name"),
