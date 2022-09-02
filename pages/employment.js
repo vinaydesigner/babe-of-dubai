@@ -27,7 +27,7 @@ const initialValues = {
 }
 
 
-const employment = () => {
+const Employment = () => {
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
@@ -148,4 +148,4 @@ const employment = () => {
     )
 }
 
-export default employment
+export default Employment

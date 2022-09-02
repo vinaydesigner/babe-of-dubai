@@ -16,7 +16,7 @@ const initialValues = {
 // close here //
 
 
-const contactus = () => {
+const Contactus = () => {
 
     // this function for contact us page data put in API start here some part on line no 10 //
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -86,4 +86,4 @@ const contactus = () => {
     )
 }
 
-export default contactus
+export default Contactus
