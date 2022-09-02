@@ -57,7 +57,7 @@ const review = ({ rqpage, remetas }) => {
                   </>
                 )
 
-              })};
+              })}
             </Col>
           </Row>
         </Container>
