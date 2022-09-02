@@ -72,67 +72,67 @@ const employment = () => {
                                 <form onSubmit={handleSubmit}>
                                     <Row>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="full_name" autocomplete='off' value={values.full_name} onChange={handleChange} onBlur={handleBlur} placeholder='Full name'></input>
+                                            <input type="text" name="full_name" value={values.full_name} onChange={handleChange} onBlur={handleBlur} placeholder='Full name'></input>
                                             {errors.full_name && touched.full_name ? (<p className="error">{errors.full_name}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="email" name="email" autocomplete='off' value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder='Email address'></input>
+                                            <input type="email" name="email" value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder='Email address'></input>
                                             {errors.email && touched.email ? (<p className="error">{errors.email}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="contact_no" autocomplete='off' value={values.contact_no} onChange={handleChange} onBlur={handleBlur} placeholder='Contact number'></input>
+                                            <input type="text" name="contact_no" value={values.contact_no} onChange={handleChange} onBlur={handleBlur} placeholder='Contact number'></input>
                                             {errors.contact_no && touched.contact_no ? (<p className="error">{errors.contact_no}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="location" autocomplete='off' value={values.location} onChange={handleChange} onBlur={handleBlur} placeholder='Location'></input>
+                                            <input type="text" name="location" value={values.location} onChange={handleChange} onBlur={handleBlur} placeholder='Location'></input>
                                             {errors.location && touched.location ? (<p className="error">{errors.location}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="age" autocomplete='off' value={values.age} onChange={handleChange} onBlur={handleBlur} placeholder='Age'></input>
+                                            <input type="text" name="age" value={values.age} onChange={handleChange} onBlur={handleBlur} placeholder='Age'></input>
                                             {errors.age && touched.age ? (<p className="error">{errors.age}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="height" autocomplete='off' value={values.height} onChange={handleChange} onBlur={handleBlur} placeholder='Height'></input>
+                                            <input type="text" name="height" value={values.height} onChange={handleChange} onBlur={handleBlur} placeholder='Height'></input>
                                             {errors.height && touched.height ? (<p className="error">{errors.height}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="statistics" autocomplete='off' value={values.statistics} onChange={handleChange} onBlur={handleBlur} placeholder='Statistics'></input>
+                                            <input type="text" name="statistics" value={values.statistics} onChange={handleChange} onBlur={handleBlur} placeholder='Statistics'></input>
                                             {errors.statistics && touched.statistics ? (<p className="error">{errors.statistics}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="orientation" autocomplete='off' value={values.orientation} onChange={handleChange} onBlur={handleBlur} placeholder='Orientation'></input>
+                                            <input type="text" name="orientation" value={values.orientation} onChange={handleChange} onBlur={handleBlur} placeholder='Orientation'></input>
                                             {errors.orientation && touched.orientation ? (<p className="error">{errors.orientation}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="nationality" autocomplete='off' value={values.nationality} onChange={handleChange} onBlur={handleBlur} placeholder='Nationality'></input>
+                                            <input type="text" name="nationality" value={values.nationality} onChange={handleChange} onBlur={handleBlur} placeholder='Nationality'></input>
                                             {errors.nationality && touched.nationality ? (<p className="error">{errors.nationality}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="languages" autocomplete='off' value={values.languages} onChange={handleChange} onBlur={handleBlur} placeholder='Languages'></input>
+                                            <input type="text" name="languages" value={values.languages} onChange={handleChange} onBlur={handleBlur} placeholder='Languages'></input>
                                             {errors.languages && touched.languages ? (<p className="error">{errors.languages}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file1" autocomplete='off' value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" name="file1" value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file1 && touched.file1 ? (<p className="error">{errors.file1}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file2" autocomplete='off' value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" name="file2" value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file2 && touched.file2 ? (<p className="error">{errors.file2}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="hourly_rate" autocomplete='off' value={values.hourly_rate} onChange={handleChange} onBlur={handleBlur} placeholder='Hourly Rate'></input>
+                                            <input type="text" name="hourly_rate" value={values.hourly_rate} onChange={handleChange} onBlur={handleBlur} placeholder='Hourly Rate'></input>
                                             {errors.hourly_rate && touched.hourly_rate ? (<p className="error">{errors.hourly_rate}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="text" name="additional_hours" autocomplete='off' value={values.additional_hours} onChange={handleChange} onBlur={handleBlur} placeholder='Additional Hours'></input>
+                                            <input type="text" name="additional_hours" value={values.additional_hours} onChange={handleChange} onBlur={handleBlur} placeholder='Additional Hours'></input>
                                             {errors.additional_hours && touched.additional_hours ? (<p className="error">{errors.additional_hours}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={12} md={12}>
-                                            <textarea type="text" name="experience" autocomplete='off' value={values.experience} onChange={handleChange} onBlur={handleBlur} placeholder='Experience'></textarea>
+                                            <textarea type="text" name="experience" value={values.experience} onChange={handleChange} onBlur={handleBlur} placeholder='Experience'></textarea>
                                             {errors.experience && touched.experience ? (<p className="error">{errors.experience}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={12} md={12}>
-                                            <textarea type="text" name="addination_info" autocomplete='off' value={values.addination_info} onChange={handleChange} onBlur={handleBlur} placeholder='Additional info'></textarea>
+                                            <textarea type="text" name="addination_info" value={values.addination_info} onChange={handleChange} onBlur={handleBlur} placeholder='Additional info'></textarea>
                                         </Col>
                                         <Col xs={12} lg={12} md={12}>
                                             <input type="submit" value='Submit'></input>

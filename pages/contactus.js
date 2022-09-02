@@ -53,19 +53,19 @@ const contactus = () => {
                                 <h4>Want us to contact you</h4>
                                 <form onSubmit={handleSubmit}>
                                     <div>
-                                        <input type="text" name="first_name" autocomplete="off" placeholder='Full name' value={values.first_name} onChange={handleChange} onBlur={handleBlur} ></input>
+                                        <input type="text" name="first_name" placeholder='Full name' value={values.first_name} onChange={handleChange} onBlur={handleBlur} ></input>
                                         {errors.first_name && touched.first_name ? (<p className="error">{errors.first_name}</p>) : null}
                                     </div>
                                     <div>
-                                        <input type="email" name="email" autocomplete="off" placeholder='Email address' value={values.email} onChange={handleChange} onBlur={handleBlur} ></input>
+                                        <input type="email" name="email" placeholder='Email address' value={values.email} onChange={handleChange} onBlur={handleBlur} ></input>
                                         {errors.email && touched.email ? (<p className="error">{errors.email}</p>) : null}
                                     </div>
                                     <div>
-                                        <input type="text" name="contact_no" autocomplete="off" placeholder='Contact number' value={values.contact_no} onChange={handleChange} onBlur={handleBlur}></input>
+                                        <input type="text" name="contact_no" placeholder='Contact number' value={values.contact_no} onChange={handleChange} onBlur={handleBlur}></input>
                                         {errors.contact_no && touched.contact_no ? (<p className="error">{errors.contact_no}</p>) : null}
                                     </div>
                                     <div>
-                                        <textarea name="message" autocomplete="off" placeholder='Message' value={values.message} onChange={handleChange} onBlur={handleBlur}></textarea>
+                                        <textarea name="message" placeholder='Message' value={values.message} onChange={handleChange} onBlur={handleBlur}></textarea>
                                     </div>
                                     <input type="submit" value='Submit'></input>
                                 </form>
