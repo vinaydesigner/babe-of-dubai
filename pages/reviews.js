@@ -8,12 +8,12 @@ const review = ({ rqpage, remetas }) => {
   console.log(rqpage);
   return (
     <>
-      {remetas.map((curElem) => {
+      {remetas.map((metaElem) => {
         return (
-          <div key={curElem}>
-            <title>{curElem.meta_title}</title>
-            <meta name="keyword" content={curElem.meta_keyword} />
-            <meta name="description" content={curElem.meta_description} />
+          <div key={metaElem}>
+            <title>{metaElem.meta_title}</title>
+            <meta name="keyword" content={metaElem.meta_keyword} />
+            <meta name="description" content={metaElem.meta_description} />
           </div>
         )
       })};
@@ -26,15 +26,15 @@ const review = ({ rqpage, remetas }) => {
           <Row>
             <Col xs={12} lg={12} md={12}>
 
-              {rqpage.map((curElem) => {
+              {rqpage.map((rewElem) => {
 
                 return (
                   <>
-                    <div key={curElem} className={styles.reviewlisting}>
+                    <div key={rewElem} className={styles.reviewlisting}>
                       <Row>
                         <Col xs={6} sm={2} md={2}>
                           <div>
-                            <img src={`https://dev.havingado.net/babesofdubai${curElem.escort_image}`} />
+                            <img src={`https://dev.havingado.net/babesofdubai${rewElem.escort_image}`} />
 
                           </div>
                           <span className={styles.reviewlink}>
@@ -42,15 +42,15 @@ const review = ({ rqpage, remetas }) => {
                           </span>
                         </Col>
                         <Col xs={6} sm={4} md={4}>
-                          <p><strong>Reviewer Name :</strong> {curElem.reviewer_name}</p>
-                          <p><strong>Date of Visit :</strong> {curElem.date_of_visit}</p>
-                          <p><strong>Type of Visit :</strong> {curElem.type_of_visit}</p>
-                          <p><strong>Duration :</strong> {curElem.duration}</p>
-                          <p><strong>Looks :</strong> {curElem.looks}</p>
-                          <p><strong>Performance :</strong> {curElem.performance}</p>
+                          <p><strong>Reviewer Name :</strong> {rewElem.reviewer_name}</p>
+                          <p><strong>Date of Visit :</strong> {rewElem.date_of_visit}</p>
+                          <p><strong>Type of Visit :</strong> {rewElem.type_of_visit}</p>
+                          <p><strong>Duration :</strong> {rewElem.duration}</p>
+                          <p><strong>Looks :</strong> {rewElem.looks}</p>
+                          <p><strong>Performance :</strong> {rewElem.performance}</p>
                         </Col>
                         <Col xs={12} sm={6} md={6}>
-                          <p>{curElem.comment}</p>
+                          <p>{rewElem.comment}</p>
                         </Col>
                       </Row>
                     </div>
