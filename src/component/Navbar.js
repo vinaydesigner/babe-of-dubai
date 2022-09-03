@@ -2,13 +2,15 @@ import Link from "next/Link";
 import Image from "next/image";
 import { Container, Row } from "react-bootstrap";
 import styles from '../../styles/Home.module.css';
+import { useState } from "react";
+
 
 
 
 
 const Navbar = () => {
 
-  const [status, setStatus] = React.useState(false)
+  const [status, setStatus] = useState(false)
 
 
   return (
