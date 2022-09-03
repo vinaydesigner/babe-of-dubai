@@ -2,7 +2,7 @@ import Link from "next/Link";
 import Image from "next/image";
 import { Container, Row } from "react-bootstrap";
 import styles from '../../styles/Home.module.css';
-// import { useState } from "react";
+import { useState } from "react";
 
 
 
@@ -10,7 +10,7 @@ import styles from '../../styles/Home.module.css';
 
 const Tobnavbar = () => {
 
-  // const [status, setStatus] = useState(false)
+  const [status, setStatus] = useState(false)
 
 
   return (
@@ -35,9 +35,8 @@ const Tobnavbar = () => {
             </div>
 
 
-            {/* <button className={styles.menuopen} onClick={() => setStatus(!status)}></button> */}
-            {/* <div className={`topmenu ${status ? 'active' : ''}`}> */}
-            <div>
+            <button className={styles.menuopen} onClick={() => setStatus(!status)}></button>
+            <div className={`topmenu ${status ? 'active' : ''}`}>
               <ul>
                 <li>
                   <Link href={'/'}>Home</Link>

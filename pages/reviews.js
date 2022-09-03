@@ -70,14 +70,17 @@ export default review
 
 
 export async function getServerSideProps() {
-  const response = await fetch('https://dev.havingado.net/babesofdubai/api/v1/review-listing')
+  const response = await fetch(`https://dev.havingado.net/babesofdubai/api/v1/review-listing`)
   const data = await response.json()
+  console.log(data);
 
   return {
     props: {
-      rqpage: data.reviews,
+      rqpage: data.reviews.slice(0, 3),
       remetas: data.metas
 
     }
   }
 }
+
+
