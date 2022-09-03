@@ -3,7 +3,8 @@ import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import { contacSchemas } from '../src/schemas/contschema';
-import contactForm from './api/api';
+import contactForm from '../src/api/api';
+
 
 
 
