@@ -1,5 +1,5 @@
 // import Navbar from './navbar';
-import Footer from './footer';
+// import Footer from './footer';
 
 
 
@@ -9,7 +9,7 @@ const layout = ({children}) => {
     <>
       {/* <Navbar /> */}
         <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
