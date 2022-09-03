@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 
-const Navbar = () => {
+const Tobnavbar = () => {
 
   const [status, setStatus] = useState(false)
 
@@ -75,4 +75,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Tobnavbar
