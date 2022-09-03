@@ -1,5 +1,5 @@
-import Tobnavbar from '/tobnavbar';
-import Bottomfooter from '/bottomfooter';
+import Tobnavbar from './tobnavbar';
+import Bottomfooter from './bottomfooter';
 
 
 
