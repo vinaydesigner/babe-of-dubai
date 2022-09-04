@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import Link from 'next/link';
-import Pupupselfi from '../../src/component/pupupselfi'
+import Pupupselfi from '../../src/component/Pupupselfi'
 
 const Modelsdetails = () => {
     return (
