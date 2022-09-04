@@ -1,4 +1,3 @@
-import Styles from '../../styles/Home.module.css';
 import Accordion from 'react-bootstrap/Accordion';
 import Image from "next/image";
 import React from "react";
