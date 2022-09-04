@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import Fillter from '../src/component/Fillter';
+import Fillter from '../src/component/fillter';
 import Modelsthums from "../src/component/modelsthums";
 import React, { useState } from 'react';
 

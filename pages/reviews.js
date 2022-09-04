@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { Container, Row, Col } from 'react-bootstrap';
 
 
-const review = ({ rqpage, remetas }) => {
+const Review = ({ rqpage, remetas }) => {
   console.log(rqpage);
   return (
     <>
@@ -66,7 +66,7 @@ const review = ({ rqpage, remetas }) => {
   )
 }
 
-export default review
+export default Review
 
 
 export async function getServerSideProps() {
