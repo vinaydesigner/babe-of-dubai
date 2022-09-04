@@ -4,7 +4,7 @@ import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import Link from 'next/link';
 import Pupupselfi from '../../src/component/pupupselfi'
 
-const modelsdetails = () => {
+const Modelsdetails = () => {
     return (
         <>
             <div className={styles.h_textinfo}>
@@ -148,7 +148,7 @@ const modelsdetails = () => {
     )
 }
 
-export default modelsdetails
+export default Modelsdetails
 
 
 
