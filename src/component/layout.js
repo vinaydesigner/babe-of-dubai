@@ -1,5 +1,5 @@
-import Bottom from "./common/Bottom";
-import Topbar from "./common/Topbar";
+import Bottom from "./common/bottom";
+import Topbar from "./common/topbar";
 
 
 
