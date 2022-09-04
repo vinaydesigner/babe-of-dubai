@@ -1,6 +1,5 @@
-import Bottom from "./common/bottom";
-import Topbar from "./common/topbar";
-
+import Topbar from "./common/Topbar"
+import Bottom from "./common/Bottom"
 
 
 const Layout = ({children}) => {
