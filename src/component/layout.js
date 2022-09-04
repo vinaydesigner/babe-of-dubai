@@ -1,20 +1,37 @@
-import Tobnavbar from './tobnavbar';
-import Bottomfooter from './bottomfooter';
-
+import Bottom from "./common/Bottom";
+import Topbar from "./common/Topbar";
 
 
 
 const Layout = ({children}) => {
   return (
     <>
-      <Tobnavbar />
+        <Topbar></Topbar>
         <main>{children}</main>
-      <Bottomfooter />
+        <Bottom></Bottom>
     </>
   )
 }
 
 export default Layout
+
+// import Tobnavbar from './tobnavbar';
+// import Bottomfooter from './bottomfooter';
+
+
+
+
+// const Layout = ({children}) => {
+//   return (
+//     <>
+//       <Tobnavbar />
+//         <main>{children}</main>
+//       <Bottomfooter />
+//     </>
+//   )
+// }
+
+// export default Layout
 
 
 

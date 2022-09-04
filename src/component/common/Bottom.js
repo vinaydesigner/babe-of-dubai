@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Container, Row } from 'react-bootstrap';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 
 
-
-
-
-
-const Bottomfooter = () => {
+const Bottom = () => {
     return (
         <>
+
             <footer className={styles.footer}>
 
                 <Container>
@@ -52,7 +49,7 @@ const Bottomfooter = () => {
                                 <Link href={'/reviews'}>Reviews</Link>
                             </li>
                             <li>
-                                <Link href={'/faq'}>FAQ’s</Link>
+                                <Link href={'/faq'}>FAQs</Link>
                             </li>
                             <li>
                                 <Link href={'/blog'}>Blog/Articles</Link>
@@ -81,8 +78,21 @@ const Bottomfooter = () => {
                     </Link>
                 </div>
             </footer>
+
         </>
     )
 }
 
-export default Bottomfooter
+export default Bottom
+
+
+
+
+
+
+
+
+
+
+
+
