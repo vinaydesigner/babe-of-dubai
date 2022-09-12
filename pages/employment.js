@@ -51,12 +51,12 @@ const Employment = () => {
             data.append("file1", values.file1);
             data.append("file2", values.file2);
             const response = employmentForm(data)
-            // console.log(response);
+            console.log(response);
 
         }
 
     })
-    // console.log(values);
+    console.log(values);
 
     return (
         <>

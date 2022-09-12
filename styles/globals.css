@@ -24,6 +24,32 @@ a {
 }
 
 
+/* comman classes */
+.error {
+  color: #f00 !important;
+  font-size: 12px;
+}
+
+.dateicon,
+.timeicon {
+  background: #000 url(../public/images/input-icon-bg.png) top right no-repeat !important;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff
+}
+
+
 
 /* top menu  css here */
 .topmenu {
@@ -94,11 +120,11 @@ a {
 
 .fillterbox::before {
   width: 2px;
-  height: 450px;
+  height: 100%;
   opacity: 1;
   position: absolute;
   left: -15px;
-  top: 50px;
+  top: 0px;
   content: '';
   z-index: 300;
   background: transparent linear-gradient(90deg, #000000 0%, #835627 50%, #000000 100%) 0% 0% no-repeat padding-box;
@@ -182,6 +208,17 @@ a {
   color: #000 !important;
 }
 
+.modelsprofilepic img:first-child {
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+.modelsprofilepic img {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
 
 .md_linksof_video_selfi {
   margin-bottom: 30px;
@@ -234,6 +271,11 @@ a {
   color: #fff !important;
   margin-bottom: 70px;
   margin-top: 0px !important;
+}
+
+.md_aboutme {
+  color: #fff;
+  line-height: 30px;
 }
 
 .modelsdetails_innerbox .md_title span,
@@ -377,9 +419,14 @@ a {
   border: none;
 }
 
-.error {
-  color: #f00 !important;
-  font-size: 12px;
+.modal-body img {
+  width: 100%;
+}
+
+
+.modal-body video {
+  width: 100%;
+  height: auto;
 }
 
 

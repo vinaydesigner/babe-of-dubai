@@ -369,6 +369,16 @@
   float: right;
 }
 
+.thumouterbox .modelslocation strong {
+  font-weight: 500;
+}
+
+.thumouterbox .modelslocation strong:nth-child(2n) {
+  border-left: #000 solid 1px;
+  padding-left: 5px;
+  margin-left: 2px;
+}
+
 .available,
 .notavailable {
   width: 15px;
@@ -399,6 +409,10 @@
 .modelsdetailspage {
   margin-top: 50px;
 }
+
+
+
+
 
 .contactuspage,
 .employmentpage,
@@ -523,6 +537,7 @@
   height: 100%;
   background-color: #000;
   padding-top: 0px;
+  padding-left: 0px;
   /*height: 800px;*/
 }
 
@@ -631,6 +646,27 @@
   display: none;
 }
 
+.duoprofilebox {
+  float: left;
+  border: #484848 solid 1px;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  box-sizing: content-box;
+  width: 47%;
+}
+
+.duoprofilebox .thumouterbox {
+  width: 48%;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.duoprofilebox h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 
 @media (max-width: 1920px) {
 

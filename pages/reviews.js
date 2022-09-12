@@ -38,7 +38,7 @@ const Review = ({ rqpage, remetas }) => {
 
                           </div>
                           <span className={styles.reviewlink}>
-                            <Link href="/write-a-review">Write a Review</Link>
+                            <Link href="/writeareview">Write a Review</Link>
                           </span>
                         </Col>
                         <Col xs={6} sm={4} md={4}>
@@ -76,7 +76,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      rqpage: data.reviews.slice(0, 3),
+      rqpage: data.reviews,
       remetas: data.metas
 
     }

@@ -4,40 +4,67 @@ import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import Link from 'next/link';
 import Pupupselfi from '../../src/component/Pupupselfi'
 
-const Modelsdetails = () => {
+
+const Modelsdetails = ({ data }) => {
+    console.log(data);
+
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>Models Details </h1>
+                <h1>Models Detils</h1>
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
 
                 <Container fluid className={styles.modelsdetailspage}>
                     <Row>
                         <Col xs={12} lg={4} md={4}>
                             <div className='md_linksof_video_selfi'>
-                                <Pupupselfi></Pupupselfi>
+                                <Pupupselfi data={data} />
                             </div>
-                            <div className='md_title mobile'>Bridget   <span>AED 200/300</span></div>
-                            <Image src="/images/models_thumbnails/pic1.jpg" width={350} height={520}></Image>
+                            <div className='md_title mobile'>
+                                {data.escorts[0].escort_name}
+                                <span>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}
+                                </span>
+                            </div>
+                            <div className='modelsprofilepic'>
+                                {data.main_gallery.map((Item) => {
+                                    return (
+                                        <>
+                                            <img src={`https://dev.havingado.net/babesofdubai${Item.galllery_img}`} />
+                                        </>
+                                    )
+
+                                })}
+                            </div>
+                            {/* <img src={`https://dev.havingado.net/babesofdubai${data.main_gallery[0].galllery_img}`} /> */}
                         </Col>
                         <Col xs={12} lg={8} md={8}>
                             <div className='modelsdetails_innerbox'>
-                                <div className='md_title'>Bridget   <span>AED 200/300</span></div>
-                                <Accordion defaultActiveKey={['0', '1']} >
+                                <div className='md_title'>{data.escorts[0].escort_name}   <span>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}</span></div>
+                                <Accordion defaultActiveKey={['0']} >
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header> Stats </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_stats'>
                                                 <ul>
-                                                    <li><strong>25</strong> Age</li>
-                                                    <li><strong>5&apos; 4&#39;</strong> Height</li>
-                                                    <li><strong>White</strong> Hair Colour</li>
-                                                    <li><strong>Black</strong> Eye Colour</li>
-                                                    <li><strong>Eastern</strong> Eye Colour</li>
-                                                    <li><strong>34D</strong> Bust</li>
-                                                    <li><strong>Enhanced</strong> Boobs</li>
-                                                    <li><strong>Large</strong> Dress Size</li>
-                                                    <li><strong>Adware Road</strong> Location</li>
+                                                    {/* {data.escorts.map((Item) => {
+                                                        return (
+                                                            <>
+                                                                <li><strong> {Item.age} </strong> Age </li>
+                                                            </>
+                                                        )
+                                                    })} */}
+
+                                                    <li><strong> {data.escorts[0].height} </strong> Height</li>
+                                                    <li><strong> {data.escorts[0].weight}</strong> Weight</li>
+                                                    <li><strong> {data.escorts[0].hair_lenght}</strong> Hair Lenght</li>
+                                                    <li><strong> {data.escorts[0].hair_color}</strong> Hair Colour</li>
+                                                    <li><strong> {data.escorts[0].bust_size}</strong> Bust Size</li>
+                                                    <li><strong> {data.escorts[0].cup_size}</strong> Cup Size</li>
+                                                    <li><strong> {data.escorts[0].eyes}</strong> Eye Colour</li>
+                                                    <li><strong> {data.escorts[0].dress_size}</strong> Dress Size</li>
+                                                    <li><strong> {data.escorts[0].shoe_size}</strong> Shoe Size</li>
+                                                    <li><strong> {data.escorts[0].body_type}</strong> Body Type</li>
+                                                    <li><strong> {data.escorts[0].smoker}</strong> Smoking</li>
                                                 </ul>
                                             </div>
                                         </Accordion.Body>
@@ -46,13 +73,7 @@ const Modelsdetails = () => {
                                         <Accordion.Header> About Me </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_aboutme'>
-                                                <p>Likes ws giving stripping and lap dancing dinner dates massage foot worship party Mce sitting 69 owo</p>
-                                                <p>Uniforms naughjity schoolgirl sexy secretary fitness latex.</p>
-                                                <p>This is a Bridget profile here at Babes of Dubai</p>
-                                                <p>Bridget is a 24-year-old blonde babe who joins us from Eastern Europe this sexy beautiful lady has natural 34C boobs stands at SUR and perfect English.</p>
-                                                <p>Bridget is a Dream come true!</p>
-                                                <p>You will see from her professional pictures just what a sexy curvy figure this lady has you will see from her gorgeous selfie just how naughty she loo can you imagine this sexy blonde dress. as a secretary popping up f rorn under your desk to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>
-                                                <p>You will see from her professional pictures just what a sexy curvy figure this lady has you will see from her gorgeous selfie just how naughty she loo can you imagine this sexy blonde dress. as a secretary popping up f rorn under your desk If you have never book. time with an escort before then do please read our guide to making a hookingwith a London escort - we have tried to cover all the points that you may need or not know.</p>
+                                                {data.escorts[0].about}
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -60,6 +81,28 @@ const Modelsdetails = () => {
                                         <Accordion.Header> Rates </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_rates'>
+                                                {/* <ul>
+                                                    <li>
+                                                        <span></span>
+                                                        <span>Incall</span>
+                                                        <span>Outcall</span>
+                                                    </li>
+                                                    <li>
+                                                        {data.rates.map((Item) => {
+                                                            return (
+                                                                <>
+                                                                    <span></span>
+                                                                    <span>
+                                                                        {Item.halfHrInCallRate}
+                                                                    </span>
+                                                                    <span>
+                                                                        {Item.halfHrOutCallRate}
+                                                                    </span>
+                                                                </>
+                                                            )
+                                                        })}
+                                                    </li>
+                                                </ul> */}
                                                 <ul>
                                                     <li>
                                                         <span></span>
@@ -67,14 +110,34 @@ const Modelsdetails = () => {
                                                         <span>Outcall</span>
                                                     </li>
                                                     <li>
-                                                        <span>1 Hour</span>
-                                                        <span>200</span>
-                                                        <span>350</span>
+                                                        <span>30 Mins</span>
+                                                        <span>{data.rates[0].halfHrInCallRate}</span>
+                                                        <span>{data.rates[0].halfHrOutCallRate}</span>
                                                     </li>
                                                     <li>
-                                                        <span>90 Mins</span>
-                                                        <span>400</span>
-                                                        <span>550</span>
+                                                        <span>1 Hour</span>
+                                                        <span>{data.rates[0].oneHrInCallRate}</span>
+                                                        <span>{data.rates[0].oneHrOutCallRate}</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>2 Hour</span>
+                                                        <span>{data.rates[0].twoHrInCallRate}</span>
+                                                        <span>{data.rates[0].twoHrOutCallRate}</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>3 Hour</span>
+                                                        <span>{data.rates[0].threeHrInCallRate}</span>
+                                                        <span>{data.rates[0].threeHrOutCallRate}</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>4 Hour</span>
+                                                        <span>{data.rates[0].fourHrInCallRate}</span>
+                                                        <span>{data.rates[0].fourHrOutCallRate}</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Over Night</span>
+                                                        <span>{data.rates[0].overNightInCallRate}</span>
+                                                        <span>{data.rates[0].overNightOutCallRate}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -84,10 +147,13 @@ const Modelsdetails = () => {
                                         <Accordion.Header> Location </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_location'>
-                                                <span>International</span>
-                                                <span>Umm Suqeim</span>
-                                                <span>Meadows</span>
-                                                <span>Emirates</span>
+                                                {data.locations.map((Item) => {
+                                                    return (
+                                                        <>
+                                                            <span> {Item.location_name} </span>
+                                                        </>
+                                                    )
+                                                })}
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -95,14 +161,13 @@ const Modelsdetails = () => {
                                         <Accordion.Header> What I Like </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_whatlike'>
-                                                <span>Incall</span>
-                                                <span>Outcall</span>
-                                                <span>A Level</span>
-                                                <span>Party</span>
-                                                <span>Watersport</span>
-                                                <span>Meadows</span>
-                                                <span>Curvy</span>
-                                                <span>Dinner Dates</span>
+                                                {data.services.map((Item) => {
+                                                    return (
+                                                        <>
+                                                            <span>{Item.service_name}</span>
+                                                        </>
+                                                    )
+                                                })}
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -110,8 +175,23 @@ const Modelsdetails = () => {
                                         <Accordion.Header> Review </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_review'>
-                                                <Link href="/write-a-review">Write a Review</Link>
-                                                <ul>
+                                                <Link href="/writeareview">Write a Review</Link>
+                                                {data.reivews.map((Item) => {
+                                                    return (
+                                                        <>
+                                                            <ul>
+                                                                <li>
+                                                                    <span>{Item.rating}</span>
+                                                                    {Item.review_date}
+                                                                    <p>{Item.comment}</p>
+                                                                </li>
+                                                            </ul>
+
+
+                                                        </>
+                                                    )
+                                                })}
+                                                {/* <ul>
                                                     <li>
                                                         <div>
                                                             <span>
@@ -121,11 +201,13 @@ const Modelsdetails = () => {
                                                                 <img src='/images/star_fill.png' />
                                                                 <img src='/images/star_blank.png' />
                                                             </span>
-                                                            <span className='rw_date'>11 July 2022</span>
+                                                            <span>{data.reivews[0].rating}</span>
+                                                            <span>{data.reivews[0].review_date}</span>
                                                         </div>
-                                                        <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+                                                        <p>{data.reivews[0].comment}</p>
+
                                                     </li>
-                                                </ul>
+                                                </ul> */}
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -133,8 +215,8 @@ const Modelsdetails = () => {
                                         <Accordion.Header> Book me now </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_booknow'>
-                                                <Link href="tel:+97138595225">+971 38595225</Link>
-                                                <Link href="#">Book Me!</Link>
+                                                <Link href="tel:+9100000">{data.escorts[0].phone_no}</Link>
+                                                <Link href="/booking">Book Me!</Link>
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -149,6 +231,19 @@ const Modelsdetails = () => {
 }
 
 export default Modelsdetails
+
+
+export const getServerSideProps = async (context) => {
+    const slug = context.query.slug;
+    const res = await fetch(`https://dev.havingado.net/babesofdubai/api/v1/escort-detail/${slug}`);
+    const data = await res.json();
+    console.log(data)
+
+
+    return {
+        props: { data },
+    }
+};
 
 
 
