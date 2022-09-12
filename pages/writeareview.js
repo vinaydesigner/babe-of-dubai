@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
-import { wreviewschema } from '../src/schemas/Wreviewschema'
+import { wreviewschema } from '../src/schemas/wreviewschema'
 import { wreviewapi } from '../src/api/wreviewapi';
 
 
