@@ -215,7 +215,7 @@ const Modelsdetails = ({ data }) => {
                                         <Accordion.Header> Book me now </Accordion.Header>
                                         <Accordion.Body>
                                             <div className='md_booknow'>
-                                                <Link href="tel:+9100000">{data.escorts[0].phone_no}</Link>
+                                                {/* <Link href="#"><a href={data.escorts[0].phon_no}>{data.escorts[0].phon_no}</a></Link> */}
                                                 <Link href="/booking">Book Me!</Link>
                                             </div>
                                         </Accordion.Body>

@@ -9,8 +9,9 @@ import Fillter from '../src/component/Fillter';
 
 
 
+
 export default function Home({ homedata }) {
-  const [isHidden1, setIsHidden1] = useState(true);
+  const [isHidden1, setIsHidden1] = useState(true); /* this for buger menu */
 
 
   return (
@@ -44,7 +45,7 @@ export default function Home({ homedata }) {
                   <Row>
                     <div className={styles.heading_shorby}>Shor by</div>
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1 }} md={{ span: 9, order: 1 }}>
-                      {/* <Modelsthums /> */}
+                      {/* <Modelsthums modeldata={modeldata} /> */}
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
                       <Fillter></Fillter>

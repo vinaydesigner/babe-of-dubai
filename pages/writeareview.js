@@ -8,6 +8,7 @@ import { wreviewapi } from '../src/api/wreviewapi';
 
 
 
+
 const initialValues = {
   escort_id: 2,
   reviewer_name: "",
@@ -26,6 +27,7 @@ const initialValues = {
 
 
 const Writeareview = () => {
+
 
   // for review modal images select option
   // const reviewimage = reviewimageapi(); 

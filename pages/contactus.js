@@ -26,17 +26,17 @@ const Contactus = () => {
         initialValues: initialValues,
         validationSchema: contacSchemas,
         onSubmit: (values) => {
-
             var data = new FormData();
             data.append("first_name", values.first_name);
             data.append("email", values.email);
             data.append("contact_no", values.contact_no);
             data.append("message", values.message);
             const response = contactForm(data)
-            // console.log(response);
+            console.log(response);
 
         }
     })
+
     // close here //
 
 
