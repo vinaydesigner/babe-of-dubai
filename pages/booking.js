@@ -3,8 +3,8 @@ import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import { bookingForm } from '../src/api/bookingapi';
-// import { bookingForm } from '../src/api/api';
 import { bookingSchemas } from '../src/schemas/bookingschema';
+import { useState } from 'react';
 
 
 const initialValues = {
@@ -22,8 +22,9 @@ const initialValues = {
 
 
 
-
 const Booking = () => {
+
+  const [thumState, setThumState] = useState("");
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
@@ -57,14 +58,19 @@ const Booking = () => {
             <Row>
               <Col xs={12} lg={5} md={5}>
                 <div className={styles.booking_mobels_box}>
-                  <select name="escort_id" value={values.escort_id} onChange={handleChange} onBlur={handleBlur}>
-                    <option value="1" disabled>Choose your escort</option>
+                  <select name="escort_id" value={values.thumState} onChange={(e) => {
+                    const selectedThum = e.target.value;
+                    setThumState(selectedThum)
+
+                  }}>
+                    <option>Choose your escort</option>
                     <option value="1">Model 1</option>
                     <option value="2">Model 2</option>
                     <option value="3">Model 3</option>
                     <option value="4">Model 4</option>
                   </select>
                   <div>
+                    <h1>{thumState}</h1>
                     <Image src="/images/models_thumbnails/pic1.jpg" alt="Model name" width={540} height={760}></Image>
                   </div>
                 </div>

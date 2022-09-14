@@ -34,7 +34,7 @@ export default function Home({ homedata }) {
               </Head>
 
               <div className={styles.h_textinfo}>
-                <h1>Dubai Escorts</h1>
+                <h1>{curElem.page_name}</h1>
                 <p> {curElem.section1} <span className={isHidden1 ? 'redemore-hide' : null}> {curElem.section2}</span>
                   <button className='read_more' onClick={() => setIsHidden1(!isHidden1)}> {isHidden1 ? "+ Read More" : "- Read Less"} </button>
                 </p>
@@ -43,7 +43,7 @@ export default function Home({ homedata }) {
 
                 <Container fluid className={styles.h_thumnanils}>
                   <Row>
-                    <div className={styles.heading_shorby}>Shor by</div>
+                    <div className={styles.heading_shorby}>Short by</div>
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1 }} md={{ span: 9, order: 1 }}>
                       {/* <Modelsthums modeldata={modeldata} /> */}
                     </Col>
