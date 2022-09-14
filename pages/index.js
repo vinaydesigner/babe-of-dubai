@@ -59,7 +59,7 @@ export default function Home({ homedata }) {
 
 
                 <div>
-
+                  {/* <p>{curElem.section3}</p> */}
 
                   <h2>About Dubai Escorts</h2>
                   <p>Dubai escorts are call girls who sell their time and companionship to gentlemen seeking the services of hot escort girls.</p>
