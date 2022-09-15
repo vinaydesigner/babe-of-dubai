@@ -34,7 +34,7 @@ const Review = ({ rqpage, remetas }) => {
                       <Row>
                         <Col xs={6} sm={2} md={2}>
                           <div>
-                            <img src={`https://dev.havingado.net/babesofdubai${rewElem.escort_image}`} />
+                            <img src={`https://dev.havingado.net/babesofdubai${rewElem.escort_image}`} width={120} />
 
                           </div>
                           <span className={styles.reviewlink}>
