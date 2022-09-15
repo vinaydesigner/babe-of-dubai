@@ -7,7 +7,7 @@ import { Duoescortapi, Duoescorttextapi } from '../src/api/duoescortsapi';
 import { useState, useEffect } from 'react';
 
 
-const duoescorts = () => {
+const Duoescorts = () => {
 
   const [duoescort, setDuoescort] = useState([]);
   const [duoescorttext, setDuoescorttext] = useState([]);
@@ -157,7 +157,7 @@ const duoescorts = () => {
   )
 }
 
-export default duoescorts
+export default Duoescorts
 
 
 
