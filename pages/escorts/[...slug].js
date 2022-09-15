@@ -12,6 +12,7 @@ const Modelsdetails = ({ data }) => {
         <>
             <div className={styles.h_textinfo}>
                 <h1>Models Detils</h1>
+                <div dangerouslySetInnerHTML={{ __html: data.section1 }}></div>
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
 
                 <Container fluid className={styles.modelsdetailspage}>

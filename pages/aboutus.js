@@ -31,11 +31,11 @@ const aboutus = ({ aboutdata }) => {
                     <Image src="/images/about-img.png" width={528} height={538} alt="about model pic" />
                   </Col>
                   <Col xs={12} lg={7} md={7}>
-                    <p>{curElem.section1}</p>
-                    <p>{curElem.section2}</p>
+                    <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
                   </Col>
                   <Col xs={12} lg={12} md={12}>
-                    <p>{curElem.section3}</p>
+                    <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+                    <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
                   </Col>
                 </Row>
               </Container>

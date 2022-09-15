@@ -48,8 +48,8 @@ const Employment = () => {
             data.append("additional_hours", values.additional_hours);
             data.append("experience", values.experience);
             data.append("addination_info", values.addination_info);
-            data.append("file1", values.file1);
-            data.append("file2", values.file2);
+            data.append('file1', document.querySelector('#file1').files[0]);
+            data.append("file2", document.querySelector('#file2').files[0]);
             const response = employmentForm(data)
             console.log(response);
 
@@ -112,11 +112,11 @@ const Employment = () => {
                                             {errors.languages && touched.languages ? (<p className="error">{errors.languages}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file1" value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" id="file1" name="file1" value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file1 && touched.file1 ? (<p className="error">{errors.file1}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file2" value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" id="file2" name="file2" value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file2 && touched.file2 ? (<p className="error">{errors.file2}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>

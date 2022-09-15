@@ -58,11 +58,7 @@ const Booking = () => {
             <Row>
               <Col xs={12} lg={5} md={5}>
                 <div className={styles.booking_mobels_box}>
-                  <select name="escort_id" value={values.thumState} onChange={(e) => {
-                    const selectedThum = e.target.value;
-                    setThumState(selectedThum)
-
-                  }}>
+                  <select name="escort_id">
                     <option>Choose your escort</option>
                     <option value="1">Model 1</option>
                     <option value="2">Model 2</option>
@@ -70,7 +66,6 @@ const Booking = () => {
                     <option value="4">Model 4</option>
                   </select>
                   <div>
-                    <h1>{thumState}</h1>
                     <Image src="/images/models_thumbnails/pic1.jpg" alt="Model name" width={540} height={760}></Image>
                   </div>
                 </div>
