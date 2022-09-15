@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const escorts = () => {
+const Escorts = () => {
 
   const [modellistdata, setModellistData] = useState([]);
   const [modeltextdata, setModeltextData] = useState([]);
@@ -77,7 +77,7 @@ const escorts = () => {
 
 
 
-export default escorts
+export default Escorts
 
 
 
