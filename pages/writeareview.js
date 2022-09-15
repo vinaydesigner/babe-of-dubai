@@ -8,7 +8,7 @@ import { BookingSelect } from "../src/api/bookingapi";
 import { useEffect, useState } from "react";
 
 const initialValues = {
-  escort_id: 2,
+  escort_id: "",
   reviewer_name: "",
   email: "",
   contact_no: "",
@@ -24,10 +24,13 @@ const initialValues = {
 const Writeareview = () => {
   const [selectDetail, setSelectDetails] = useState([]);
   const [attributeList, setAttributeList] = useState({});
+  const [id, setId] = useState();
 
   const fetchData = async () => {
     var data = await BookingSelect();
     setSelectDetails(data.escorts);
+    setAttributeList(data.escorts[0].thumbnail);
+    setId(data.escorts[0].id);
   };
 
   useEffect(() => {
@@ -44,7 +47,7 @@ const Writeareview = () => {
       validationSchema: wreviewschema,
       onSubmit: (values) => {
         var data = new FormData();
-        data.append("escort_id", values.escort_id);
+        data.append("escort_id", id);
         data.append("reviewer_name", values.reviewer_name);
         data.append("email", values.email);
         data.append("contact_no", values.contact_no);
@@ -66,6 +69,7 @@ const Writeareview = () => {
     const { name, value } = e.target;
     const data = JSON.parse(value);
     console.log(data.thumbnail);
+    setId(data.id);
     setAttributeList(data.thumbnail);
   };
 

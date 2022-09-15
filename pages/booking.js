@@ -26,6 +26,7 @@ const Booking = () => {
   const fetchData = async () => {
     var data = await BookingSelect();
     setSelectDetails(data.escorts);
+    setAttributeList(data.escorts[0].thumbnail);
   };
 
   useEffect(() => {
