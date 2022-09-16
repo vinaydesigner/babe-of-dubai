@@ -27,3 +27,18 @@ export const BookingSelect = async (data) => {
             console.log(error);
         });
 };
+
+
+export const BookingText = async (data) => {
+    return axios
+        .get("https://dev.havingado.net/babesofdubai/api/v1/page-data/booking")
+        .then((response) => {
+            if (response.status === 200 || response.status === 201) {
+                return response.data;
+            }
+            // console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+};

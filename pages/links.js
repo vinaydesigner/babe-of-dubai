@@ -10,7 +10,7 @@ const links = ({ linksdata }) => {
       {linksdata.map((curElem) => {
         console.log(curElem);
         return (
-          <div key={curElem}>
+          <div key={curElem.id}>
             <Head>
               <title>{curElem.meta_title}</title>
               <meta name="keyword" content={curElem.meta_keyword} />
@@ -18,13 +18,12 @@ const links = ({ linksdata }) => {
             </Head>
 
             <div className={styles.h_textinfo}>
-              <h1>{curElem.page_name}</h1>
+              <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
               <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
 
               <Container fluid className={styles.linkspage}>
                 <Row>
                   <Col xs={12} lg={12} md={12}>
-                    <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
                     <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
                     <Image src="/images/linkpic1.jpg" width={468} height={60}></Image>
                     <div className={styles.linkcodearea}>

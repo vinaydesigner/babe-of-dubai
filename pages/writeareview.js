@@ -77,11 +77,11 @@ const Writeareview = () => {
     <>
       <div className={styles.h_textinfo}>
         <h1>Write A Review</h1>
-        <p>
+        {/* <p>
           To meet hot blonde, brunette, busty and curvy companions as early as
           tonight from AED150/hour, check out our full selection of London
           escorts.
-        </p>
+        </p> */}
         <Image
           src="/images/hori_golden_line.svg"
           alt="line"

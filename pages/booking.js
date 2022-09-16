@@ -2,11 +2,12 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import { bookingForm, BookingSelect } from "../src/api/bookingapi";
+import { bookingForm, BookingSelect, BookingText } from "../src/api/bookingapi";
 // import { bookingForm } from '../src/api/api';
 import { bookingSchemas } from "../src/schemas/bookingschema";
 import { useState } from "react";
 import { useEffect } from "react";
+import Head from "next/head";
 
 const initialValues = {
   escort_id: "",
@@ -22,6 +23,7 @@ const initialValues = {
 const Booking = () => {
   const [selectDetail, setSelectDetails] = useState([]);
   const [attributeList, setAttributeList] = useState({});
+  const [bookingtext, setBookingtext] = useState([]);
 
   const fetchData = async () => {
     var data = await BookingSelect();
@@ -29,8 +31,14 @@ const Booking = () => {
     setAttributeList(data.escorts[0].thumbnail);
   };
 
+  const fetchbookingtext = async () => {
+    var boktextdata = await BookingText();
+    setBookingtext(boktextdata.page);
+  }
+
   useEffect(() => {
     fetchData();
+    fetchbookingtext();
   }, []);
 
   console.log("data is", selectDetail);
@@ -70,12 +78,21 @@ const Booking = () => {
   return (
     <>
       <div className={styles.h_textinfo}>
-        <h1>Bookings</h1>
-        <p>
-          To meet hot blonde, brunette, busty and curvy companions as early as
-          tonight from AED150/hour, check out our full selection of London
-          escorts.
-        </p>
+        {bookingtext.map((curElem) => {
+          console.log(curElem);
+          return (
+            <div key={curElem.id}>
+              <Head>
+                <title>{curElem.meta_title}</title>
+                <meta name="keyword" content={curElem.meta_keyword} />
+                <meta name="description" content={curElem.meta_description} />
+                <link rel="icon" href="favicon.ico" />
+              </Head>
+
+              <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+            </div>
+          )
+        })}
         <Image
           src="/images/hori_golden_line.svg"
           alt="line"
@@ -210,6 +227,15 @@ const Booking = () => {
             </Row>
           </form>
         </Container>
+        {bookingtext.map((curElem) => {
+          console.log(curElem);
+          return (
+            <div key={curElem.id}>
+              <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+              <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
+            </div>
+          )
+        })}
       </div>
     </>
   );

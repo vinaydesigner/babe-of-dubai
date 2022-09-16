@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
+import Head from 'next/head';
+
 
 
 
@@ -10,22 +12,23 @@ const faq = ({ faqpage, fmetas }) => {
 
     return (
         <>
-
-            {fmetas.map((curElem) => {
-                return (
-                    <div key={curElem}>
-                        <title>{curElem.meta_title}</title>
-                        <meta name="keyword" content={curElem.meta_keyword} />
-                        <meta name="description" content={curElem.meta_description} />
-                    </div>
-                )
-            })};
-
-
-
             <div className={styles.h_textinfo}>
 
-                <h1>FAQ&ldquo;s</h1>
+                {fmetas.map((curElem) => {
+                    return (
+                        <div key={curElem}>
+                            <Head>
+                                <title>{curElem.meta_title}</title>
+                                <meta name="keyword" content={curElem.meta_keyword} />
+                                <meta name="description" content={curElem.meta_description} />
+                            </Head>
+
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+                        </div>
+                    )
+                })}
+
+
                 <Image src="/images/hori_golden_line.svg" alt="hline" layout='responsive' width={1366} height={5} />
                 <div>
                     <Container fluid className='faqpage'>
@@ -45,6 +48,7 @@ const faq = ({ faqpage, fmetas }) => {
                                                         </Accordion.Item>
                                                     </Accordion>
                                                 </div>
+
                                             </div>
                                         </>
                                     )

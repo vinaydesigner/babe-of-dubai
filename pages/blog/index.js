@@ -45,7 +45,8 @@ const index = ({ bpage, bmeta }) => {
                         <div className={styles.bloginfo}>
                           <span className={styles.byad}> {curElem.author} | {curElem.publish_date}</span>
                           <Link href={`/blog/${curElem.slug}`}><h5 className={styles.blog_title}>{curElem.title}</h5></Link>
-                          <p>{curElem.blog_description}</p>
+                          {/* <p>{curElem.blog_description}</p> */}
+                          {/* <div dangerouslySetInnerHTML={{ __html: curElem.blog_description }}></div> */}
                         </div>
                       </div>
                     </div>

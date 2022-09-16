@@ -95,32 +95,48 @@
 }
 
 .h_textinfo h1,
-.h_textinfo h2,
-.h_textinfo h3,
-.h_textinfo h4,
-.h_textinfo h5,
 .allescortpage h1,
-.duoescortpage h1 {
+.duoescortpage h1,
+.h_textinfo h2,
+.allescortpage h2,
+.duoescortpage h2,
+.h_textinfo h3,
+.allescortpage h3,
+.duoescortpage h3,
+.h_textinfo h4,
+.allescortpage h4,
+.duoescortpage h4,
+.h_textinfo h5,
+.allescortpage h5,
+.duoescortpage h5 {
   color: #D9B155;
   font-size: 36px;
 }
 
-.h_textinfo h2 {
+.h_textinfo h2,
+.allescortpage h2,
+.duoescortpage h2 {
   font-size: 30px;
   margin-top: 30px;
 }
 
-.h_textinfo h3 {
+.h_textinfo h3,
+.allescortpage h3,
+.duoescortpage h3 {
   font-size: 24px;
   margin-top: 30px;
 }
 
-.h_textinfo h4 {
+.h_textinfo h4,
+.allescortpage h4,
+.duoescortpage h4 {
   font-size: 22px;
   margin-top: 30px;
 }
 
-.h_textinfo h5 {
+.h_textinfo h5,
+.allescortpage h5,
+.duoescortpage h5 {
   font-size: 20px;
   margin-top: 30px;
 }
@@ -666,6 +682,7 @@
   color: #fff;
   font-size: 20px;
   margin-bottom: 15px;
+  margin-top: 0px;
 }
 
 @media (max-width: 1920px) {
@@ -679,7 +696,8 @@
 
   .thumouterbox {
     width: 23%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 }
 
@@ -694,8 +712,11 @@
 
   .thumouterbox {
     width: 23%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
+
+
 }
 
 @media (max-width: 1300px) {

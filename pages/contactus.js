@@ -3,8 +3,9 @@ import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import { contacSchemas } from '../src/schemas/contschema';
-import contactForm from '../src/api/api';
-
+import { contactForm, ContactusText } from '../src/api/api';
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 
 
@@ -21,6 +22,16 @@ const initialValues = {
 
 const Contactus = () => {
 
+    const [contacttext, setContacttext] = useState([]);
+    const fechcontactData = async () => {
+        var contactdata = await ContactusText();
+        setContacttext(contactdata.page);
+    };
+    useEffect(() => {
+        fechcontactData();
+    }, []);
+
+
     // this function for contact us page data put in API start here some part on line no 10 //
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
@@ -36,6 +47,7 @@ const Contactus = () => {
 
         }
     })
+    console.log(values);
 
     // close here //
 
@@ -45,8 +57,22 @@ const Contactus = () => {
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>Contact Us</h1>
-                <p>To meet hot blonde&apos; brunette&apos; busty and curvy companions as early as tonight from AED150/hour&apos; check out our full selection of London escorts.</p>
+                {contacttext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <Head>
+                                <title>{curElem.meta_title}</title>
+                                <meta name="keyword" content={curElem.meta_keyword} />
+                                <meta name="description" content={curElem.meta_description} />
+                                <link rel="icon" href="favicon.ico" />
+                            </Head>
+
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+                        </div>
+                    )
+                })}
+
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
                 <Container fluid className={styles.contactuspage}>
                     <Row>
@@ -84,6 +110,16 @@ const Contactus = () => {
 
                     </Row>
                 </Container>
+
+                {contacttext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
+                        </div>
+                    )
+                })}
             </div>
         </>
     )

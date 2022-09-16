@@ -3,7 +3,10 @@ import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import { employmentSchemas } from '../src/schemas/emplyschema';
-import employmentForm from '../src/api/empapi';
+import { employmentForm, EmploymentText } from '../src/api/empapi';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+
 
 
 
@@ -28,6 +31,15 @@ const initialValues = {
 
 
 const Employment = () => {
+
+    const [employtext, setEmploytext] = useState([]);
+    const fechemployData = async () => {
+        var employdata = await EmploymentText();
+        setEmploytext(employdata.page);
+    };
+    useEffect(() => {
+        fechemployData();
+    }, []);
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
@@ -61,8 +73,21 @@ const Employment = () => {
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>Employment</h1>
-                <p>If you would like to join us then youve come to the right place.</p>
+                {employtext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <Head>
+                                <title>{curElem.meta_title}</title>
+                                <meta name="keyword" content={curElem.meta_keyword} />
+                                <meta name="description" content={curElem.meta_description} />
+                                <link rel="icon" href="favicon.ico" />
+                            </Head>
+
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+                        </div>
+                    )
+                })}
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
                 <Container fluid className={styles.employmentpage}>
                     <Row>
@@ -143,6 +168,15 @@ const Employment = () => {
                         </Col>
                     </Row>
                 </Container>
+                {employtext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
+                        </div>
+                    )
+                })}
             </div>
         </>
     )
