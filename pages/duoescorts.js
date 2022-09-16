@@ -87,7 +87,7 @@ const Duoescorts = () => {
                                 </div>
                                 <div className={styles.modelslocation}>
                                   <span>{curElemt.location_f}</span>
-                                  <span>AUD <strong> {curElemt.halfHrInCallRate_f} </strong> <strong> {curElemt.halfHrOutCallRate_f} </strong> </span >
+                                  <span>AED <strong> {curElemt.halfHrInCallRate_f} </strong> <strong> {curElemt.halfHrOutCallRate_f} </strong> </span >
                                 </div>
 
                               </div>
@@ -126,7 +126,7 @@ const Duoescorts = () => {
                                 </div>
                                 <div className={styles.modelslocation}>
                                   <span>{curElemt.location_s}</span>
-                                  <span>AUD <strong> {curElemt.halfHrInCallRate_s} </strong> <strong> {curElemt.halfHrOutCallRate_s} </strong> </span >
+                                  <span>AED <strong> {curElemt.halfHrInCallRate_s} </strong> <strong> {curElemt.halfHrOutCallRate_s} </strong> </span >
                                 </div>
 
                               </div>

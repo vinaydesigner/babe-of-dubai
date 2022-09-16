@@ -15,7 +15,7 @@ const Modelsthums = ({ modeldata }) => {
                 return (
                     <>
 
-                        <div className={styles.thumouterbox} key={curElemt.id}>
+                        <div key={curElemt.id} className={styles.thumouterbox} >
                             <Link href={`/escorts/${curElemt.slug}`}>
                                 <a>
                                     <div className={styles.picbox}>
@@ -48,7 +48,7 @@ const Modelsthums = ({ modeldata }) => {
                             </div>
                             <div className={styles.modelslocation}>
                                 <span>{curElemt.location}</span>
-                                <span>AUD <strong> {curElemt.halfHrInCallRate} </strong> <strong> {curElemt.halfHrOutCallRate} </strong> </span >
+                                <span>AED <strong> {curElemt.halfHrInCallRate} </strong> <strong> {curElemt.halfHrOutCallRate} </strong> </span >
                             </div>
 
                         </div>

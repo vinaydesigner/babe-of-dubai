@@ -68,13 +68,13 @@ const Bottom = () => {
                 <div className={styles.copyright}>© 2022 Luxury Dolls, All Rights Reserved Designed By <Link href="#">Wave69</Link></div>
                 <div className={styles.mobile_quickinfo}>
                     <Link href={'tel:+447831475881'}>
-                        <a><Image src="/images/call_icon.svg" width={32} height={32} ></Image></a>
+                        <a><Image src="/images/call_new.png" width={32} height={32} ></Image></a>
                     </Link>
                     <Link className={styles.toptelegram} href={'tel:+447831475881'}>
-                        <a><Image src="/images/telegram_icon.svg" width={32} height={32} ></Image></a>
+                        <a><Image src="/images/sms_new.png" width={32} height={32} ></Image></a>
                     </Link>
                     <Link className={styles.topwhatapps} href={'tel:+447831475881'}>
-                        <a><Image src="/images/whatsapp_icon.svg" width={36} height={36} ></Image></a>
+                        <a><Image src="/images/what_new.png" width={36} height={36} ></Image></a>
                     </Link>
                 </div>
             </footer>

@@ -59,9 +59,9 @@ export default function Home() {
 
               <div className={styles.h_textinfo}>
                 {/* <h1>{curElem.page_name}</h1> */}
-                <p> <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+                <p> <span dangerouslySetInnerHTML={{ __html: curElem.section1 }}></span>
                   <span className={isHidden1 ? 'redemore-hide' : null}>
-                    <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+                    <span dangerouslySetInnerHTML={{ __html: curElem.section2 }}></span>
                   </span>
                   <button className='read_more' onClick={() => setIsHidden1(!isHidden1)}> {isHidden1 ? "+ Read More" : "- Read Less"} </button>
                 </p>

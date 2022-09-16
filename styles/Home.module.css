@@ -601,6 +601,7 @@
   border: none;
   padding: 10px;
   resize: none;
+  height: 150px;
 }
 
 .bloglistpage .bloginnerbox {
@@ -816,7 +817,9 @@
   }
 
   .thumouterbox .picbox img {
-    width: 400px !important;
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
   }
 
 
@@ -844,21 +847,23 @@
     text-align: center;
     display: block;
     position: fixed;
-    bottom: -10px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     z-index: 5000;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     background: #fff;
-    padding: 5px 5px 10px 5px;
-    border-radius: 10px;
+    padding: 5px 5px 15px 5px;
+
+    /* border-radius: 10px; */
   }
 
   .mobile_quickinfo a {
-    padding: 0 10px;
+    padding: 0 20px;
     cursor: pointer;
     display: inline-block;
+    margin-top: -50px;
   }
 
   .bookingpage {

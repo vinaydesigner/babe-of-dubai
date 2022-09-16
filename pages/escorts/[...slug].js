@@ -11,7 +11,7 @@ const Modelsdetails = ({ data }) => {
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>Models Detils</h1>
+                <h1>{data.escorts[0].escort_name}'s Details</h1>
                 <div dangerouslySetInnerHTML={{ __html: data.section1 }}></div>
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
 
@@ -22,9 +22,9 @@ const Modelsdetails = ({ data }) => {
                                 <Pupupselfi data={data} />
                             </div>
                             <div className='md_title mobile'>
-                                {data.escorts[0].escort_name}
-                                <span>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}
-                                </span>
+                                {/* {data.escorts[0].escort_name} */}
+                                AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}
+
                             </div>
                             <div className='modelsprofilepic'>
                                 {data.main_gallery.map((Item) => {
@@ -40,7 +40,8 @@ const Modelsdetails = ({ data }) => {
                         </Col>
                         <Col xs={12} lg={8} md={8}>
                             <div className='modelsdetails_innerbox'>
-                                <div className='md_title'>{data.escorts[0].escort_name}   <span>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}</span></div>
+                                {/* <span>{data.escorts[0].escort_name}</span> */}
+                                <div className='md_title'>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}</div>
                                 <Accordion defaultActiveKey={['0']} >
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header> Stats </Accordion.Header>

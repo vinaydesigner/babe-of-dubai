@@ -24,11 +24,11 @@ const links = ({ linksdata }) => {
               <Container fluid className={styles.linkspage}>
                 <Row>
                   <Col xs={12} lg={12} md={12}>
-                    <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
-                    <Image src="/images/linkpic1.jpg" width={468} height={60}></Image>
+                    {/* <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div> */}
                     <div className={styles.linkcodearea}>
-                      <textarea>Code place here</textarea>
+                      <textarea>{curElem.section2}</textarea>
                     </div>
+                    <br />
                   </Col>
                 </Row>
                 <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
