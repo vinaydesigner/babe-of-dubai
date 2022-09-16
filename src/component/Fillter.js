@@ -19,13 +19,14 @@ const Fillter = () => {
                             <Accordion.Header>By Price</Accordion.Header>
                             <Accordion.Body>
                                 <label>
-                                    <input type="radio" /> Under AED200
+
+                                    <input type="checkbox" /> Under AED200
                                 </label>
                                 <label>
-                                    <input type="radio" /> AED200-300
+                                    <input type="checkbox" /> AED200-300
                                 </label>
                                 <label>
-                                    <input type="radio" /> AED300+
+                                    <input type="checkbox" /> AED300+
                                 </label>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -33,13 +34,13 @@ const Fillter = () => {
                             <Accordion.Header>Hair Color</Accordion.Header>
                             <Accordion.Body>
                                 <label>
-                                    <input type="radio" /> Black
+                                    <input type="checkbox" /> Black
                                 </label>
                                 <label>
-                                    <input type="radio" /> Blonde
+                                    <input type="checkbox" /> Blonde
                                 </label>
                                 <label>
-                                    <input type="radio" /> Blonde & Blands
+                                    <input type="checkbox" /> Blonde & Blands
                                 </label>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -47,13 +48,13 @@ const Fillter = () => {
                             <Accordion.Header>Nationality</Accordion.Header>
                             <Accordion.Body>
                                 <label>
-                                    <input type="radio" /> Eastern European
+                                    <input type="checkbox" /> Eastern European
                                 </label>
                                 <label>
-                                    <input type="radio" /> Eastern
+                                    <input type="checkbox" /> Eastern
                                 </label>
                                 <label>
-                                    <input type="radio" /> Austrian
+                                    <input type="checkbox" /> Austrian
                                 </label>
                             </Accordion.Body>
                         </Accordion.Item>
