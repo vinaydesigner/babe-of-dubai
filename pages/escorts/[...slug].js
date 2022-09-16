@@ -11,7 +11,7 @@ const Modelsdetails = ({ data }) => {
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>{data.escorts[0].escort_name}'s Details</h1>
+                <h1>{data.escorts[0].escort_name}&prime;s Details</h1>
                 <div dangerouslySetInnerHTML={{ __html: data.section1 }}></div>
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
 
