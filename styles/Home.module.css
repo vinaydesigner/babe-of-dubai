@@ -426,6 +426,17 @@
   margin-top: 50px;
 }
 
+.linkcodearea {
+  background: #fff;
+  width: 70%;
+  padding: 15px 20px;
+}
+
+.linkspage .bannerimgs a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 
 
 

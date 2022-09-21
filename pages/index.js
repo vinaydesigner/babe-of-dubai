@@ -5,7 +5,8 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Modelsthums from "../src/component/modelsthums";
 import Fillter from '../src/component/Fillter';
-import { HomepageData, HModeldata } from '../src/api/homepageapi';
+import { HomepageData, HModeldata, Fillterdataapi } from '../src/api/homepageapi';
+
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
   /* this function for home page contnet API line no 19,22 to 25 and 32,33 */
   const [homeDatanew, setHomeDatanew] = useState([]);
   const [HomepageModeldata, setHomePageModeldata] = useState([]);
+  const [fillterdata, setFillterData] = useState([]);
 
   const fetchData = async () => {
     var data = await HomepageData();
@@ -30,9 +32,17 @@ export default function Home() {
     setHomePageModeldata(hmthum.escorts)
   };
 
+  /* fillter data listing API here*/
+  const fetchfillterData = async () => {
+    var filldata = await Fillterdataapi();
+    setFillterData(filldata);
+    console.log(fillterdata)
+  };
+
   useEffect(() => {
     fetchData();
     fetchModalthumData();
+    fetchfillterData();
   }, []);
 
 
@@ -45,7 +55,7 @@ export default function Home() {
 
 
       {homeDatanew.map((curElem) => {
-        console.log(curElem);
+        // console.log(curElem);
         return (
           <>
             <div key={curElem.id}>
@@ -75,7 +85,7 @@ export default function Home() {
                       <Modelsthums modeldata={HomepageModeldata} />
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
-                      <Fillter></Fillter>
+                      <Fillter fillter={fillterdata}></Fillter>
                     </Col>
                   </Row>
                 </Container>

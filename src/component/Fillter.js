@@ -1,13 +1,24 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Image from "next/image";
 import React from "react";
+import Locationcheck from './common/locationcheckbox';
+import Servicescheckbox from './common/servicescheckbox';
+import Haircolorcheckbox from './common/haircolorcheckbox';
+import Ratescheckbox from './common/ratescheckbox';
 
 
-const Fillter = () => {
+
+
+const Fillter = ({ fillter }) => {
+    console.log(fillter);
+
     const [status, setStatus] = React.useState(false)
+
+
 
     return (
         <>
+
             <div className='fillterbox'>
                 <button className="fillter" onClick={() => setStatus(!status)}>
                     <Image src="/images/filter_icon.png" alt="filter" width={16} height={16} /> Fillter
@@ -16,46 +27,39 @@ const Fillter = () => {
                 <div className={`fillterinner ${status ? 'active' : ''}`}>
                     <Accordion defaultActiveKey={['0']} >
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>By Price</Accordion.Header>
+                            <Accordion.Header>Services</Accordion.Header>
                             <Accordion.Body>
-                                <label>
+                                <Servicescheckbox fillter={fillter}></Servicescheckbox>
+                                {/* {fillter.hair_color.map((curElem) => {
+                                    return (
+                                        <>
+                                            <div key={curElem}>
+                                                <Checkbox>
+                                                    {curElem.Black}
+                                                </Checkbox>
+                                            </div>
+                                        </>
+                                    )
+                                })} */}
 
-                                    <input type="checkbox" /> Under AED200
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> AED200-300
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> AED300+
-                                </label>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Hair Color</Accordion.Header>
                             <Accordion.Body>
-                                <label>
-                                    <input type="checkbox" /> Black
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> Blonde
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> Blonde & Blands
-                                </label>
+                                <Haircolorcheckbox fillter={fillter}></Haircolorcheckbox>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header>Nationality</Accordion.Header>
+                            <Accordion.Header>Location</Accordion.Header>
                             <Accordion.Body>
-                                <label>
-                                    <input type="checkbox" /> Eastern European
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> Eastern
-                                </label>
-                                <label>
-                                    <input type="checkbox" /> Austrian
-                                </label>
+                                <Locationcheck fillter={fillter}></Locationcheck>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="3">
+                            <Accordion.Header>Rates</Accordion.Header>
+                            <Accordion.Body>
+                                <Ratescheckbox fillter={fillter}></Ratescheckbox>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>

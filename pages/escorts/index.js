@@ -59,7 +59,7 @@ const Escorts = () => {
                       <Modelsthums modeldata={modellistdata} />
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
-                      <Fillter></Fillter>
+                      {/* <Fillter fillter={fillterdata}></Fillter> */}
                     </Col>
                   </Row>
                 </Container>

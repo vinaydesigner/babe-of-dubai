@@ -28,7 +28,7 @@ const aboutus = ({ aboutdata }) => {
               <Container fluid className={styles.aboutuspage}>
                 <Row>
                   <Col xs={12} lg={5} md={5}>
-                    <Image src="/images/about-img.png" width={528} height={538} alt="about model pic" />
+                    <img src={`https://dev.havingado.net/babesofdubai${curElem.image}`} width={480} alt="about model pic" />
                   </Col>
                   <Col xs={12} lg={7} md={7}>
                     <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>

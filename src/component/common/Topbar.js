@@ -5,21 +5,32 @@ import { Container, Row } from "react-bootstrap";
 import styles from '../../../styles/Home.module.css';
 
 
-
-
-
-
-
 const Topbar = () => {
-    const [status, setStatus] = useState(false);
+    // console.log(headermenu);
 
+    const [status, setStatus] = useState(false);
 
     return (
         <>
-
             <header id="header">
                 <Container fluid>
                     <Row>
+                        {/* {headermenu.setting.map((curElem) => {
+
+                            return (
+                                <>
+                                    <div key={curElem}>
+                                        <p className={styles.topcall}><span>Call Now</span><Link href={'/'}> {curElem.contact_no} </Link></p>
+                                    </div>
+                                </>
+
+                            )
+                        })} */}
+
+
+
+
+
                         <div className={styles.topquickinfo}>
                             <ul>
                                 <li className={styles.topcall}><span>Call Now</span><Link href={'tel:+447831475881'}> (+44) 07831 475881 </Link></li>
@@ -27,6 +38,9 @@ const Topbar = () => {
                                 <li className={styles.topwhatapps}><Link href={'tel:+447831475881'}> (+44) 07831 475881 </Link></li>
                             </ul>
                         </div>
+
+
+
                         <div className={styles.logo}>
                             <Link href={'/'}><a><Image
                                 src="/images/logo.png"
@@ -79,3 +93,5 @@ const Topbar = () => {
 }
 
 export default Topbar
+
+
