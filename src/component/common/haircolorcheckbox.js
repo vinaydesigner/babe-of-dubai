@@ -20,7 +20,7 @@ const Haircolorcheckbox = ({ fillter }) => {
 
     return (
         <>
-            {fillter.hair_color.map((item) => {
+            {fillter?.hair_color?.map((item) => {
                 return (
                     <>
                         <div key={item}>

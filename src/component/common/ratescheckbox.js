@@ -21,7 +21,7 @@ const Ratescheckbox = ({ fillter }) => {
 
     return (
         <>
-            {fillter.rates.map((item) => {
+            {fillter?.rates?.map((item) => {
                 return (
                     <>
                         <div key={item}>

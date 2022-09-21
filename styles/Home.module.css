@@ -697,6 +697,20 @@
   margin-top: 0px;
 }
 
+.thankyoupage {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding: 150px 0px;
+}
+
+.thankyoupage h1 {
+  font-size: 40px;
+  margin: 0px;
+  padding: 0px;
+  color: #d9b155;
+}
+
 @media (max-width: 1920px) {
 
   .h_textinfo,

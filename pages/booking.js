@@ -8,6 +8,7 @@ import { bookingSchemas } from "../src/schemas/bookingschema";
 import { useState } from "react";
 import { useEffect } from "react";
 import Head from "next/head";
+import { useRouter } from 'next/router';
 
 const initialValues = {
   escort_id: "",
@@ -21,6 +22,11 @@ const initialValues = {
 };
 
 const Booking = () => {
+
+  // Thank you page call of on click submit buttton //
+  const router = useRouter();
+  // thank you page fn close here //
+
   const [selectDetail, setSelectDetails] = useState([]);
   const [attributeList, setAttributeList] = useState({});
   const [bookingtext, setBookingtext] = useState([]);
@@ -58,6 +64,7 @@ const Booking = () => {
         data.append("booking_time", values.booking_time);
         data.append("booking_duration", values.booking_duration);
         const response = bookingForm(data);
+        router.push("/thankyoubooking");
         console.log(response);
       },
     });

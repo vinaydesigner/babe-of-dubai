@@ -6,6 +6,8 @@ import { contacSchemas } from '../src/schemas/contschema';
 import { contactForm, ContactusText } from '../src/api/api';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+
 
 
 
@@ -22,6 +24,12 @@ const initialValues = {
 
 const Contactus = () => {
 
+    // Thank you page call of on click submit buttton //
+    const router = useRouter();
+    // thank you page fn close here //
+
+
+
     const [contacttext, setContacttext] = useState([]);
     const fechcontactData = async () => {
         var contactdata = await ContactusText();
@@ -30,6 +38,7 @@ const Contactus = () => {
     useEffect(() => {
         fechcontactData();
     }, []);
+
 
 
     // this function for contact us page data put in API start here some part on line no 10 //
@@ -42,23 +51,22 @@ const Contactus = () => {
             data.append("email", values.email);
             data.append("contact_no", values.contact_no);
             data.append("message", values.message);
-            const response = contactForm(data)
+            const response = contactForm(data);
+            router.push("/thankyoucontactus");
             console.log(response);
 
         }
+
     })
     console.log(values);
-
     // close here //
-
-
 
 
     return (
         <>
             <div className={styles.h_textinfo}>
                 {contacttext.map((curElem) => {
-                    console.log(curElem);
+                    // console.log(curElem);
                     return (
                         <div key={curElem.id}>
                             <Head>
@@ -112,7 +120,7 @@ const Contactus = () => {
                 </Container>
 
                 {contacttext.map((curElem) => {
-                    console.log(curElem);
+                    // console.log(curElem);
                     return (
                         <div key={curElem.id}>
                             <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>

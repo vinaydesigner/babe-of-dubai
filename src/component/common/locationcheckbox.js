@@ -25,7 +25,7 @@ const Locationcheck = ({ fillter }) => {
 
     return (
         <>
-            {fillter.locations.map((item) => {
+            {fillter?.locations?.map((item) => {
                 return (
                     <>
                         <div key={item}>

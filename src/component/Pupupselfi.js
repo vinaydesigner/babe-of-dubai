@@ -2,38 +2,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Carousel from 'react-bootstrap/Carousel';
+import Selfislider from './common/selfislider';
 
-function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-  return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://dev.havingado.net/babesofdubai/uploads/escorts_gallery/1663330915_gallery_0.jpg"
-          alt="First slide"
-        />
-
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://dev.havingado.net/babesofdubai/uploads/escorts_gallery/1663330915_gallery_1.jpg"
-          alt="First slide"
-        />
-
-      </Carousel.Item>
-
-    </Carousel>
-  );
-}
 
 
 
@@ -83,7 +53,7 @@ const Pupupselfi = ({ data }) => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <ControlledCarousel />
+            <Selfislider data={data}></Selfislider>
             {/* <Carousel>
               {data.selfie_gallery.map((Item) => {
                 console.log(Item)

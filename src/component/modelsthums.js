@@ -48,7 +48,7 @@ const Modelsthums = ({ modeldata }) => {
                             </div>
                             <div className={styles.modelslocation}>
                                 <span>{curElemt.location}</span>
-                                <span>AED <strong> {curElemt.halfHrInCallRate} </strong> <strong> {curElemt.halfHrOutCallRate} </strong> </span >
+                                <span>AED <strong> {curElemt.oneHrInCallRate} </strong> <strong> {curElemt.oneHrOutCallRate} </strong> </span >
                             </div>
 
                         </div>

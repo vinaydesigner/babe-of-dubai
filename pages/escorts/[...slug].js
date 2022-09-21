@@ -6,7 +6,7 @@ import Pupupselfi from '../../src/component/Pupupselfi'
 
 
 const Modelsdetails = ({ data }) => {
-    console.log(data);
+    // console.log(data);
 
     return (
         <>
@@ -23,7 +23,7 @@ const Modelsdetails = ({ data }) => {
                             </div>
                             <div className='md_title mobile'>
                                 {/* {data.escorts[0].escort_name} */}
-                                AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}
+                                AED {data.rates[0].oneHrInCallRate} / {data.rates[0].oneHrOutCallRate}
 
                             </div>
                             <div className='modelsprofilepic'>
@@ -41,7 +41,7 @@ const Modelsdetails = ({ data }) => {
                         <Col xs={12} lg={8} md={8}>
                             <div className='modelsdetails_innerbox'>
                                 {/* <span>{data.escorts[0].escort_name}</span> */}
-                                <div className='md_title'>AED {data.rates[0].halfHrInCallRate} / {data.rates[0].halfHrOutCallRate}</div>
+                                <div className='md_title'>AED {data.rates[0].oneHrInCallRate} / {data.rates[0].oneHrOutCallRate}</div>
                                 <Accordion defaultActiveKey={['0']} >
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header> Stats </Accordion.Header>

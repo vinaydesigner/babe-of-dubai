@@ -6,6 +6,7 @@ import { employmentSchemas } from '../src/schemas/emplyschema';
 import { employmentForm, EmploymentText } from '../src/api/empapi';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 
 
@@ -31,6 +32,10 @@ const initialValues = {
 
 
 const Employment = () => {
+
+    // Thank you page call of on click submit buttton //
+    const router = useRouter();
+    // thank you page fn close here //
 
     const [employtext, setEmploytext] = useState([]);
     const fechemployData = async () => {
@@ -62,7 +67,8 @@ const Employment = () => {
             data.append("addination_info", values.addination_info);
             data.append('file1', document.querySelector('#file1').files[0]);
             data.append("file2", document.querySelector('#file2').files[0]);
-            const response = employmentForm(data)
+            const response = employmentForm(data);
+            router.push("/thankyouemployment");
             console.log(response);
 
         }
@@ -74,7 +80,7 @@ const Employment = () => {
         <>
             <div className={styles.h_textinfo}>
                 {employtext.map((curElem) => {
-                    console.log(curElem);
+                    // console.log(curElem);
                     return (
                         <div key={curElem.id}>
                             <Head>
@@ -169,7 +175,7 @@ const Employment = () => {
                     </Row>
                 </Container>
                 {employtext.map((curElem) => {
-                    console.log(curElem);
+                    // console.log(curElem);
                     return (
                         <div key={curElem.id}>
                             <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>

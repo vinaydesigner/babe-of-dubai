@@ -47,6 +47,7 @@ const Escorts = () => {
                 <meta name="keyword" content={curElemt.meta_keyword} />
                 <meta name="description" content={curElemt.meta_description} />
                 <link rel="icon" href="favicon.ico" />
+
               </Head>
 
               <div className={styles.allescortpage} >
