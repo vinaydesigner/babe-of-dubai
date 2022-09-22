@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import Head from 'next/head';
 
-const links = ({ linksdata }) => {
+const links = ({ linksdata, linksbanner }) => {
   return (
     <>
 
@@ -20,22 +20,29 @@ const links = ({ linksdata }) => {
             <div className={styles.h_textinfo}>
               <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
               <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
-
               <Container fluid className={styles.linkspage}>
                 <Row>
                   <Col xs={12} lg={12} md={12}>
-                    {/* <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div> */}
                     <div className={styles.linkcodearea}>
-                      <textarea>{curElem.section2}</textarea>
+                      {curElem.section2}
                     </div>
                     <br />
                   </Col>
                 </Row>
                 <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
+                {linksbanner.map((curElem) => {
+                  console.log(curElem);
+                  return (
+                    <div key={curElem.id}>
+                      <img src={`https://dev.havingado.net/babesofdubai${curElem.banner_image}`} />
+                      <div className='bannerimgs' dangerouslySetInnerHTML={{ __html: curElem.banner_html }}></div>
+                    </div>
+                  )
+                })}
               </Container>
             </div>
 
-          </div>
+          </div >
         )
 
       })}
@@ -48,12 +55,13 @@ export default links
 
 
 export async function getServerSideProps() {
-  const response = await fetch('https://dev.havingado.net/babesofdubai/api/v1/page-data/Links')
+  const response = await fetch('https://dev.havingado.net/babesofdubai/api/v1/banner-listing')
   const data = await response.json()
 
   return {
     props: {
-      linksdata: data.page,
+      linksdata: data.metas,
+      linksbanner: data.banners,
     }
   }
 }

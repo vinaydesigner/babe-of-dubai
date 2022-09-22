@@ -8,6 +8,7 @@ import styles from '../../styles/Home.module.css';
 
 
 
+
 const details = ({ data }) => {
   // console.log("data", data);  
 

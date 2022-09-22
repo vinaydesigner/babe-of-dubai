@@ -4,7 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import styles from '../../../styles/Home.module.css';
 
 
-const Bottom = () => {
+const Bottom = ({ footermenu }) => {
     return (
         <>
 
@@ -19,15 +19,33 @@ const Bottom = () => {
                             height={236}
                         />
                         <ul>
-                            <li><a href='mailto:babesofdubai.info@gmail.com'>babesofdubai.info@gmail.com </a></li>
-                            <li><a href='tel:+447831475881'>(+44) 07831 475881</a></li>
+                            {footermenu?.setting?.map((curElem) => {
+                                return (
+                                    <>
+                                        <li><a href={'emailto:{curElem.email}'}>{curElem.email}</a></li>
+                                        <li><a href={'tel:{curElem?.contact_no}'}> {curElem?.contact_no}</a></li>
+                                    </>
+                                )
+                            })}
+
                         </ul>
                     </div>
                     <div className={styles.fotlinks}>
                         <h6>Navigations</h6>
 
                         <ul>
-                            <li>
+                            {footermenu?.footer_menu?.map((curElem) => {
+                                return (
+                                    <>
+                                        <li>
+                                            <Link href={curElem.menu_slug}>{curElem.menu_name}</Link>
+                                        </li>
+                                    </>
+                                )
+                            })}
+
+
+                            {/* <li>
                                 <Link href={'/'}>Home</Link>
                             </li>
                             <li>
@@ -59,7 +77,7 @@ const Bottom = () => {
                             </li>
                             <li>
                                 <Link href={'/contactus'}>Contact Us</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -68,13 +86,13 @@ const Bottom = () => {
                 <div className={styles.copyright}>© 2022 Luxury Dolls, All Rights Reserved Designed By <Link href="#">Wave69</Link></div>
                 <div className={styles.mobile_quickinfo}>
                     <Link href={'tel:+447831475881'}>
-                        <a><Image src="/images/call_new.png" width={32} height={32} ></Image></a>
+                        <a><Image src="/images/call_new.png" width={50} height={50} ></Image></a>
                     </Link>
                     <Link className={styles.toptelegram} href={'tel:+447831475881'}>
-                        <a><Image src="/images/sms_new.png" width={32} height={32} ></Image></a>
+                        <a><Image src="/images/sms_new.png" width={50} height={50} ></Image></a>
                     </Link>
                     <Link className={styles.topwhatapps} href={'tel:+447831475881'}>
-                        <a><Image src="/images/what_new.png" width={36} height={36} ></Image></a>
+                        <a><Image src="/images/what_new.png" width={50} height={50} ></Image></a>
                     </Link>
                 </div>
             </footer>

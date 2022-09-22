@@ -2,7 +2,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Carousel from 'react-bootstrap/Carousel';
+import Selfislider from './common/selfislider';
+
 
 
 
@@ -52,12 +53,14 @@ const Pupupselfi = ({ data }) => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Carousel>
+            <Selfislider data={data}></Selfislider>
+            {/* <Carousel>
               {data.selfie_gallery.map((Item) => {
                 console.log(Item)
                 return (
                   <>
                     <div key={Item}>
+
                       <Carousel.Item>
                         <img
                           src={`https://dev.havingado.net/babesofdubai/${Item.selfie_img}`}
@@ -67,7 +70,7 @@ const Pupupselfi = ({ data }) => {
                   </>
                 )
               })}
-            </Carousel>
+            </Carousel> */}
           </Modal.Body>
         </Modal>
 
