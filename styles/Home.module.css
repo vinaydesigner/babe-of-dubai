@@ -607,6 +607,10 @@
   text-decoration: none;
 }
 
+.formreviewimage {
+  margin-bottom: 20px;
+}
+
 .linkcodearea textarea {
   width: 50%;
   border: none;
@@ -943,6 +947,9 @@
     width: 100%;
   }
 
+  .formreviewimage img {
+    width: 100%;
+  }
 
   /*
 .thumouterbox{width: 100%; margin: 0px 0px 20px 0px;}
