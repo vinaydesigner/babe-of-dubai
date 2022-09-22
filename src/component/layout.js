@@ -1,13 +1,13 @@
 import Topbar from "./common/Topbar"
 import Bottom from "./common/Bottom"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, headermenu, footermenu }) => {
 
   return (
     <>
-      <Topbar />
+      <Topbar headermenu={headermenu} />
       <main>{children}</main>
-      <Bottom />
+      <Bottom footermenu={footermenu} />
     </>
   )
 }

@@ -21,6 +21,29 @@ export default function Home() {
   const [HomepageModeldata, setHomePageModeldata] = useState([]);
   const [fillterdata, setFillterData] = useState([]);
 
+
+  const locationData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event.escorts);
+  };
+
+  const serviceData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event.escorts);
+  };
+
+  const hairColorData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event.escorts);
+  };
+
+  const ratesData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event.escorts);
+  };
+
+
+
   const fetchData = async () => {
     var data = await HomepageData();
     setHomeDatanew(data.page);
@@ -42,9 +65,10 @@ export default function Home() {
   useEffect(() => {
     fetchData();
     fetchModalthumData();
-    fetchfillterData();
+    setTimeout(() => {
+      fetchfillterData();
+    }, 2000);
   }, []);
-
 
   /* this for buger menu */
   const [isHidden1, setIsHidden1] = useState(true);
@@ -85,7 +109,13 @@ export default function Home() {
                       <Modelsthums modeldata={HomepageModeldata} />
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
-                      <Fillter fillter={fillterdata}></Fillter>
+                      <Fillter
+                        hairColorData={hairColorData}
+                        serviceData={serviceData}
+                        ratesData={ratesData}
+                        locationData={locationData}
+                        fillter={fillterdata}
+                      ></Fillter>
                     </Col>
                   </Row>
                 </Container>
