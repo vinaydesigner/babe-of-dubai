@@ -60,8 +60,7 @@ const Locationcheck = ({
                                     type="checkbox"
                                     name="location"
                                     onChange={() => handleChange(item)}
-                                ></input>
-                                {item.location_name}
+                                ></input> {item.location_name}
                             </label>
                         </div>
                     </>

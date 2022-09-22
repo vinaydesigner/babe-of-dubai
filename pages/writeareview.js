@@ -6,6 +6,7 @@ import { wreviewschema } from "../src/schemas/wreviewschema";
 import { wreviewapi } from "../src/api/wreviewapi";
 import { BookingSelect } from "../src/api/bookingapi";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 const initialValues = {
   escort_id: "",
@@ -22,6 +23,13 @@ const initialValues = {
 };
 
 const Writeareview = () => {
+
+  // Thank you page call of on click submit buttton //
+  const router = useRouter();
+  // thank you page fn close here //
+
+
+
   const [selectDetail, setSelectDetails] = useState([]);
   const [attributeList, setAttributeList] = useState({});
   const [id, setId] = useState();
@@ -59,6 +67,7 @@ const Writeareview = () => {
         data.append("comment", values.comment);
         data.append("status", values.status);
         const response = wreviewapi(data);
+        router.push("/thankyoureview");
         console.log(response);
       },
     });
@@ -111,7 +120,7 @@ const Writeareview = () => {
                       );
                     })}
                   </select>
-                  <div>
+                  <div className={styles.formreviewimage}>
                     <img
                       src={`https://dev.havingado.net/babesofdubai${attributeList}`}
                       alt="Model name"
