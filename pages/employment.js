@@ -3,7 +3,10 @@ import styles from '../styles/Home.module.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import { employmentSchemas } from '../src/schemas/emplyschema';
-import employmentForm from '../src/api/empapi';
+import { employmentForm, EmploymentText } from '../src/api/empapi';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+
 
 
 
@@ -29,6 +32,15 @@ const initialValues = {
 
 const Employment = () => {
 
+    const [employtext, setEmploytext] = useState([]);
+    const fechemployData = async () => {
+        var employdata = await EmploymentText();
+        setEmploytext(employdata.page);
+    };
+    useEffect(() => {
+        fechemployData();
+    }, []);
+
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
         validationSchema: employmentSchemas,
@@ -48,8 +60,8 @@ const Employment = () => {
             data.append("additional_hours", values.additional_hours);
             data.append("experience", values.experience);
             data.append("addination_info", values.addination_info);
-            data.append("file1", values.file1);
-            data.append("file2", values.file2);
+            data.append('file1', document.querySelector('#file1').files[0]);
+            data.append("file2", document.querySelector('#file2').files[0]);
             const response = employmentForm(data)
             console.log(response);
 
@@ -61,8 +73,21 @@ const Employment = () => {
     return (
         <>
             <div className={styles.h_textinfo}>
-                <h1>Employment</h1>
-                <p>If you would like to join us then youve come to the right place.</p>
+                {employtext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <Head>
+                                <title>{curElem.meta_title}</title>
+                                <meta name="keyword" content={curElem.meta_keyword} />
+                                <meta name="description" content={curElem.meta_description} />
+                                <link rel="icon" href="favicon.ico" />
+                            </Head>
+
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section1 }}></div>
+                        </div>
+                    )
+                })}
                 <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
                 <Container fluid className={styles.employmentpage}>
                     <Row>
@@ -112,11 +137,11 @@ const Employment = () => {
                                             {errors.languages && touched.languages ? (<p className="error">{errors.languages}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file1" value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" id="file1" name="file1" value={values.file1} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file1 && touched.file1 ? (<p className="error">{errors.file1}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
-                                            <input type="file" name="file2" value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
+                                            <input type="file" id="file2" name="file2" value={values.file2} onChange={handleChange} onBlur={handleBlur}  ></input>
                                             {errors.file2 && touched.file2 ? (<p className="error">{errors.file2}</p>) : null}
                                         </Col>
                                         <Col xs={12} lg={6} md={6}>
@@ -143,6 +168,15 @@ const Employment = () => {
                         </Col>
                     </Row>
                 </Container>
+                {employtext.map((curElem) => {
+                    console.log(curElem);
+                    return (
+                        <div key={curElem.id}>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section2 }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: curElem.section3 }}></div>
+                        </div>
+                    )
+                })}
             </div>
         </>
     )

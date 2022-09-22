@@ -95,32 +95,48 @@
 }
 
 .h_textinfo h1,
-.h_textinfo h2,
-.h_textinfo h3,
-.h_textinfo h4,
-.h_textinfo h5,
 .allescortpage h1,
-.duoescortpage h1 {
+.duoescortpage h1,
+.h_textinfo h2,
+.allescortpage h2,
+.duoescortpage h2,
+.h_textinfo h3,
+.allescortpage h3,
+.duoescortpage h3,
+.h_textinfo h4,
+.allescortpage h4,
+.duoescortpage h4,
+.h_textinfo h5,
+.allescortpage h5,
+.duoescortpage h5 {
   color: #D9B155;
   font-size: 36px;
 }
 
-.h_textinfo h2 {
+.h_textinfo h2,
+.allescortpage h2,
+.duoescortpage h2 {
   font-size: 30px;
   margin-top: 30px;
 }
 
-.h_textinfo h3 {
+.h_textinfo h3,
+.allescortpage h3,
+.duoescortpage h3 {
   font-size: 24px;
   margin-top: 30px;
 }
 
-.h_textinfo h4 {
+.h_textinfo h4,
+.allescortpage h4,
+.duoescortpage h4 {
   font-size: 22px;
   margin-top: 30px;
 }
 
-.h_textinfo h5 {
+.h_textinfo h5,
+.allescortpage h5,
+.duoescortpage h5 {
   font-size: 20px;
   margin-top: 30px;
 }
@@ -410,6 +426,17 @@
   margin-top: 50px;
 }
 
+.linkcodearea {
+  background: #fff;
+  width: 70%;
+  padding: 15px 20px;
+}
+
+.linkspage .bannerimgs a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 
 
 
@@ -585,6 +612,7 @@
   border: none;
   padding: 10px;
   resize: none;
+  height: 150px;
 }
 
 .bloglistpage .bloginnerbox {
@@ -666,6 +694,7 @@
   color: #fff;
   font-size: 20px;
   margin-bottom: 15px;
+  margin-top: 0px;
 }
 
 @media (max-width: 1920px) {
@@ -679,7 +708,8 @@
 
   .thumouterbox {
     width: 23%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 }
 
@@ -694,8 +724,11 @@
 
   .thumouterbox {
     width: 23%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
+
+
 }
 
 @media (max-width: 1300px) {
@@ -795,7 +828,9 @@
   }
 
   .thumouterbox .picbox img {
-    width: 400px !important;
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
   }
 
 
@@ -823,21 +858,23 @@
     text-align: center;
     display: block;
     position: fixed;
-    bottom: -10px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     z-index: 5000;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     background: #fff;
-    padding: 5px 5px 10px 5px;
-    border-radius: 10px;
+    padding: 5px 5px 15px 5px;
+
+    /* border-radius: 10px; */
   }
 
   .mobile_quickinfo a {
-    padding: 0 10px;
+    padding: 0 20px;
     cursor: pointer;
     display: inline-block;
+    margin-top: -50px;
   }
 
   .bookingpage {

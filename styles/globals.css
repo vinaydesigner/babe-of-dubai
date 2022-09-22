@@ -370,6 +370,7 @@ a {
   color: #fff;
   text-decoration: none;
   padding: 5px 30px 8px 30px;
+
 }
 
 .modelsdetails_innerbox .md_booknow a:last-child:hover {
@@ -420,9 +421,12 @@ a {
   border: none;
 }
 
-.modal-body img {
+.modal-body .carousel-item img {
   width: 100%;
+
 }
+
+
 
 
 .modal-body video {

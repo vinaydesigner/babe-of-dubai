@@ -77,11 +77,11 @@ const Writeareview = () => {
     <>
       <div className={styles.h_textinfo}>
         <h1>Write A Review</h1>
-        <p>
+        {/* <p>
           To meet hot blonde, brunette, busty and curvy companions as early as
           tonight from AED150/hour, check out our full selection of London
           escorts.
-        </p>
+        </p> */}
         <Image
           src="/images/hori_golden_line.svg"
           alt="line"
@@ -115,8 +115,7 @@ const Writeareview = () => {
                     <img
                       src={`https://dev.havingado.net/babesofdubai${attributeList}`}
                       alt="Model name"
-                      width={540}
-                      height={760}
+                      width={225}
                     />
                   </div>
                 </div>
@@ -237,16 +236,11 @@ const Writeareview = () => {
                         onBlur={handleBlur}
                       >
                         <option>Choose Looks</option>
-                        <option value="10">10 Out of 10</option>
-                        <option value="9">9 Out of 10</option>
-                        <option value="8">8 Out of 10</option>
-                        <option value="7">7 Out of 10</option>
-                        <option value="6">6 Out of 10</option>
-                        <option value="5">5 Out of 10</option>
-                        <option value="4">4 Out of 10</option>
-                        <option value="3">3 Out of 10</option>
-                        <option value="2">2 Out of 10</option>
-                        <option value="1">1 Out of 10</option>
+                        <option value="5">5 Out of 5</option>
+                        <option value="4">4 Out of 5</option>
+                        <option value="3">3 Out of 5</option>
+                        <option value="2">2 Out of 5</option>
+                        <option value="1">1 Out of 5</option>
                       </select>
                       {errors.looks && touched.looks ? (
                         <p className="error">{errors.looks}</p>
@@ -260,16 +254,11 @@ const Writeareview = () => {
                         onBlur={handleBlur}
                       >
                         <option>Choose Performance</option>
-                        <option value="10">10 Out of 10</option>
-                        <option value="9">9 Out of 10</option>
-                        <option value="8">8 Out of 10</option>
-                        <option value="7">7 Out of 10</option>
-                        <option value="6">6 Out of 10</option>
-                        <option value="5">5 Out of 10</option>
-                        <option value="4">4 Out of 10</option>
-                        <option value="3">3 Out of 10</option>
-                        <option value="2">2 Out of 10</option>
-                        <option value="1">1 Out of 10</option>
+                        <option value="5">5 Out of 5</option>
+                        <option value="4">4 Out of 5</option>
+                        <option value="3">3 Out of 5</option>
+                        <option value="2">2 Out of 5</option>
+                        <option value="1">1 Out of 5</option>
                       </select>
                       {errors.performance && touched.performance ? (
                         <p className="error">{errors.performance}</p>

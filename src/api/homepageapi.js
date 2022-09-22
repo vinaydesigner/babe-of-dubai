@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const bookingForm = async (data) => {
+export const HomepageData = async () => {
   return axios
-    .post(`https://dev.havingado.net/babesofdubai/api/v1/booking-form`, data)
+    .get("https://dev.havingado.net/babesofdubai/api/v1/page-data/home")
     .then((response) => {
       if (response.status === 200 || response.status === 201) {
         return response.data;
@@ -14,9 +14,9 @@ export const bookingForm = async (data) => {
     });
 };
 
-export const BookingSelect = async (data) => {
+export const HModeldata = async (data) => {
   return axios
-    .get("https://dev.havingado.net/babesofdubai/api/v1/escort-list")
+    .get("https://dev.havingado.net/babesofdubai/api/v1/escort-listing")
     .then((response) => {
       if (response.status === 200 || response.status === 201) {
         return response.data;
@@ -28,14 +28,28 @@ export const BookingSelect = async (data) => {
     });
 };
 
-export const BookingText = async (data) => {
+export const Fillterdataapi = async (data) => {
   return axios
-    .get("https://dev.havingado.net/babesofdubai/api/v1/page-data/booking")
+    .get("https://dev.havingado.net/babesofdubai/api/v1/filteration-data")
     .then((response) => {
       if (response.status === 200 || response.status === 201) {
         return response.data;
       }
       // console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const Fillterpostdataapi = async (data) => {
+  return axios
+    .post(`https://dev.havingado.net/babesofdubai/api/v1/filter-escorts`, data)
+    .then((response) => {
+      if (response.status === 200 || response.status === 201) {
+        return response.data;
+      }
+      console.log(response.data);
     })
     .catch((error) => {
       console.log(error);
