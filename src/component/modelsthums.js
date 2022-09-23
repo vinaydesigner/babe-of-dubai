@@ -8,7 +8,7 @@ const Modelsthums = ({ modeldata }) => {
 
   return (
     <>
-      {modeldata.length == 0 ? (
+      {modeldata?.length == 0 ? (
         <p className="searchnotfound">Sorry No Data Found</p>
       ) : (
         modeldata?.map((curElemt) => {

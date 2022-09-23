@@ -24,22 +24,22 @@ export default function Home() {
 
   const locationData = (event) => {
     // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
+    setHomePageModeldata(event?.escorts);
   };
 
   const serviceData = (event) => {
     // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
+    setHomePageModeldata(event?.escorts);
   };
 
   const hairColorData = (event) => {
     // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
+    setHomePageModeldata(event?.escorts);
   };
 
   const ratesData = (event) => {
     // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
+    setHomePageModeldata(event?.escorts);
   };
 
   /* this function for home page modals API line no 28 to 31 and 32,35 */
