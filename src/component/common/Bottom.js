@@ -83,7 +83,7 @@ const Bottom = ({ footermenu }) => {
 
                 </Container>
 
-                <div className={styles.copyright}>© 2022 Babe of Dubai, All Rights Reserved Designed By <Link href="#https://www.wave69.co.uk/">Wave69</Link></div>
+                <div className={styles.copyright}>© 2022 Babe of Dubai, All Rights Reserved Designed By <Link href="https://www.wave69.co.uk">Wave69</Link></div>
                 <div className={styles.mobile_quickinfo}>
                     <Link href={'tel:+447831475881'}>
                         <a><Image src="/images/call_new.png" width={50} height={50} ></Image></a>

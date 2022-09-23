@@ -896,6 +896,15 @@
     box-sizing: border-box;
   }
 
+  .modelslocation span {
+    display: block;
+  }
+
+  .modelslocation span:first-child,
+  .modelslocation span:nth-child(2n) {
+    float: none !important;
+  }
+
   /*
 .thumouterbox{width: 100%; margin: 0px 0px 20px 0px;}
 .picbox{ height: 100% !important;} .picbox img{ width: 100%;}
