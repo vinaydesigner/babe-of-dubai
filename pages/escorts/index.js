@@ -1,22 +1,21 @@
-import Image from 'next/image';
-import styles from '../../styles/Home.module.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import Modelsthums from '../../src/component/modelsthums';
-import Fillter from '../../src/component/Fillter';
-import Head from 'next/head';
-import { Modeldataapi, Modeltextdataapi } from '../../src/api/escortlistapi';
-import { useState, useEffect } from 'react';
+import Image from "next/image";
+import styles from "../../styles/Home.module.css";
+import { Container, Row, Col } from "react-bootstrap";
+import Modelsthums from "../../src/component/modelsthums";
+import Fillter from "../../src/component/Fillter";
+import Head from "next/head";
+import { Modeldataapi, Modeltextdataapi } from "../../src/api/escortlistapi";
+import { useState, useEffect } from "react";
+import { Fillterdataapi, HModeldata } from "../../src/api/homepageapi";
 
-
-
-const Escorts = ({ fillterdata }) => {
-
-  const [modellistdata, setModellistData] = useState([]);
+const Escorts = () => {
+  const [HomepageModeldata, setHomePageModeldata] = useState([]);
   const [modeltextdata, setModeltextData] = useState([]);
+  const [fillterdata, setFillterData] = useState([]);
 
-  const fetchData = async () => {
-    var mdata = await Modeldataapi();
-    setModellistData(mdata.escorts);
+  const fetchModalthumData = async () => {
+    var hmthum = await HModeldata();
+    setHomePageModeldata(hmthum.escorts);
   };
 
   const fetchtextData = async () => {
@@ -24,15 +23,40 @@ const Escorts = ({ fillterdata }) => {
     setModeltextData(mtextdata.page);
   };
 
+  const locationData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const serviceData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const hairColorData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const ratesData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  /* fillter data listing API here*/
+  const fetchfillterData = async () => {
+    var filldata = await Fillterdataapi();
+    setFillterData(filldata);
+    console.log("filterrdata", filldata);
+  };
+
   useEffect(() => {
-    fetchData();
+    fetchModalthumData();
     fetchtextData();
+    setTimeout(() => {
+      fetchfillterData();
+    }, 2000);
   }, []);
-
-  // console.log(modeltextdata)
-  // console.log(modellistdata)
-
-
 
   return (
     <>
@@ -40,44 +64,62 @@ const Escorts = ({ fillterdata }) => {
         return (
           <>
             <div key={curElemt.id}>
-
               <Head>
                 <title>{curElemt.meta_title}</title>
                 <meta name="keyword" content={curElemt.meta_keyword} />
                 <meta name="description" content={curElemt.meta_description} />
                 <link rel="icon" href="favicon.ico" />
-
               </Head>
 
-              <div className={styles.allescortpage} >
-                <div dangerouslySetInnerHTML={{ __html: curElemt.section1 }}></div>
-                <Image src="/images/hori_golden_line.svg" alt="line" layout='responsive' width={1366} height={5} />
+              <div className={styles.allescortpage}>
+                <div
+                  dangerouslySetInnerHTML={{ __html: curElemt.section1 }}
+                ></div>
+                <Image
+                  src="/images/hori_golden_line.svg"
+                  alt="line"
+                  layout="responsive"
+                  width={1366}
+                  height={5}
+                />
 
                 <Container fluid className={styles.h_thumnanils}>
                   <Row>
-                    <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1 }} md={{ span: 9, order: 1 }}>
-                      <Modelsthums modeldata={modellistdata} />
+                    <Col
+                      xs={{ span: 12, order: 2 }}
+                      lg={{ span: 10, order: 1 }}
+                      md={{ span: 9, order: 1 }}
+                    >
+                      <Modelsthums modeldata={HomepageModeldata} />
                     </Col>
-                    <Col xs={{ span: 12, order: 1 }} lg={{ span: 2, order: 2 }} md={{ span: 3, order: 2 }}>
-                      <Fillter fillter={fillterdata}></Fillter>
+                    <Col
+                      xs={{ span: 12, order: 1 }}
+                      lg={{ span: 2, order: 2 }}
+                      md={{ span: 3, order: 2 }}
+                    >
+                      <Fillter
+                        hairColorData={hairColorData}
+                        serviceData={serviceData}
+                        ratesData={ratesData}
+                        locationData={locationData}
+                        fillter={fillterdata}
+                      ></Fillter>
                     </Col>
                   </Row>
                 </Container>
-                <div dangerouslySetInnerHTML={{ __html: curElemt.section2 }}></div>
-                <div dangerouslySetInnerHTML={{ __html: curElemt.section3 }}></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: curElemt.section2 }}
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: curElemt.section3 }}
+                ></div>
               </div>
             </div>
           </>
-        )
+        );
       })}
-
     </>
-  )
-}
+  );
+};
 
-
-
-export default Escorts
-
-
-
+export default Escorts;

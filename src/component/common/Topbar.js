@@ -65,14 +65,6 @@ const Topbar = ({ headermenu }) => {
 
 export default Topbar
 
-{/* <div className={styles.topquickinfo}>
-    <ul>
-
-        <li className={styles.topcall}><span>Call Now</span><Link href={'tel:+447831475881'}> (+44) 07831 475881 </Link></li>
-        <li className={styles.toptelegram}><Link href={'tel:+447831475881'}> (+44) 07831 475881 </Link></li>
-        <li className={styles.topwhatapps}><Link href={'tel:+447831475881'}> (+44) 07831 475881 </Link></li>
-    </ul>
-</div> */}
 
 
 

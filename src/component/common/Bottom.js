@@ -31,7 +31,7 @@ const Bottom = ({ footermenu }) => {
                         </ul>
                     </div>
                     <div className={styles.fotlinks}>
-                        <h6>Navigations</h6>
+                        <h6>Navigation</h6>
 
                         <ul>
                             {footermenu?.footer_menu?.map((curElem) => {
@@ -83,15 +83,15 @@ const Bottom = ({ footermenu }) => {
 
                 </Container>
 
-                <div className={styles.copyright}>© 2022 Luxury Dolls, All Rights Reserved Designed By <Link href="#">Wave69</Link></div>
+                <div className={styles.copyright}>© 2022 Babe of Dubai, All Rights Reserved Designed By <Link href="#https://www.wave69.co.uk/">Wave69</Link></div>
                 <div className={styles.mobile_quickinfo}>
                     <Link href={'tel:+447831475881'}>
                         <a><Image src="/images/call_new.png" width={50} height={50} ></Image></a>
                     </Link>
-                    <Link className={styles.toptelegram} href={'tel:+447831475881'}>
+                    <Link className={styles.toptelegram} href={'sms:+447831475881'}>
                         <a><Image src="/images/sms_new.png" width={50} height={50} ></Image></a>
                     </Link>
-                    <Link className={styles.topwhatapps} href={'tel:+447831475881'}>
+                    <Link className={styles.topwhatapps} href={'https://wa.me/+447831475881'}>
                         <a><Image src="/images/what_new.png" width={50} height={50} ></Image></a>
                     </Link>
                 </div>

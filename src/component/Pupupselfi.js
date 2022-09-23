@@ -28,7 +28,7 @@ const Pupupselfi = ({ data }) => {
 
       <div className='md_popup'>
         <Button onClick={() => setLgShow(true)} className='selfi_tag'>Video</Button>
-        <Button onClick={() => setSmShow(true)} className='video_tag'>Selfi</Button>
+        <Button onClick={() => setSmShow(true)} className='video_tag'>Selfie</Button>
 
 
         {/* {data.selfie_gallery.map((Item) => {

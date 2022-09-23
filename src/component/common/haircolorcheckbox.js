@@ -39,11 +39,39 @@ const Haircolorcheckbox = ({
         }
 
         var data = new FormData();
-        data.append("hair_color[]", hairCheck);
-        data.append("service[]", servicesss);
 
-        data.append("location[]", locationn);
-        data.append("rate", ratess);
+        if (locationn.length == 0) {
+            data.append(`location[]`, "");
+        } else {
+            locationn.map((item, index) => {
+                data.append(`location[${index}]`, item);
+            });
+        }
+
+        if (hairCheck.length == 0) {
+            data.append(`hair_color[]`, "");
+        } else {
+            hairCheck.map((item, index) => {
+                data.append(`hair_color[${index}]`, item);
+            });
+        }
+
+        if (servicesss.length == 0) {
+            data.append(`service[]`, "");
+        } else {
+            console.log(servicesss);
+            servicesss.map((item, index) => {
+                data.append(`service[${index}]`, item);
+            });
+        }
+
+        if (ratess.length == 0) {
+            data.append(`rate`, "");
+        } else {
+            ratess.map((item, index) => {
+                data.append(`rate`, item);
+            });
+        }
         const response = await Fillterpostdataapi(data);
         console.log(response);
         HairColorResponse(response);
@@ -62,8 +90,7 @@ const Haircolorcheckbox = ({
                                     name="hair_color[]"
                                     //   value={values.hair_color}
                                     onChange={() => handleChange(item)}
-                                ></input>
-                                {item.hair_color}
+                                ></input> {item.hair_color}
                             </label>
                         </div>
                     </>

@@ -183,7 +183,7 @@ const Modelsdetails = ({ data }) => {
                                                         <>
                                                             <ul>
                                                                 <li>
-                                                                    <span>{Item.rating}</span>
+                                                                    <div>Looks : {Item.looks}</div> <div>Performance : {Item.performance}</div>
                                                                     {Item.review_date}
                                                                     <p>{Item.comment}</p>
                                                                 </li>

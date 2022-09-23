@@ -107,6 +107,16 @@ a {
   /*border-left: #d9b155 solid 1px; padding-left: 20px; height: 100%;*/
 }
 
+/*
+.fillterinner h3 {
+  margin-top: 0px !important;
+  margin-bottom: 0px;
+  color: #000 !important;
+  font-size: 20px !important;
+  background: #fff;
+  padding: 5px;
+}
+*/
 .fillterbox .fillter {
   color: #fff;
   font-size: 20px;
@@ -179,7 +189,7 @@ a {
   color: #fff;
   font-size: 14px;
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 
@@ -535,6 +545,18 @@ a {
     margin-left: 0;
   }
 
+  .modelsprofilepic img {
+    width: 65px;
+  }
+
+  .modelsprofilepic img:last-child {
+    margin-right: 0px;
+  }
+
+  .modelsdetails_innerbox .md_stats li {
+    width: 46%;
+    margin: 5px;
+  }
 
 
 }

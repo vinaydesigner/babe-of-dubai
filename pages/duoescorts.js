@@ -60,8 +60,7 @@ const Duoescorts = () => {
                                     <div className={styles.picbox}>
                                       <img
                                         src={`https://dev.havingado.net/babesofdubai${curElemt.thumbnail_f}`}
-                                        width={270}
-                                        height={400}
+
                                         alt={curElemt.escort_name_f}
                                         layout="responsive"
                                       />
@@ -87,7 +86,7 @@ const Duoescorts = () => {
                                 </div>
                                 <div className={styles.modelslocation}>
                                   <span>{curElemt.location_f}</span>
-                                  <span>AED <strong> {curElemt.halfHrInCallRate_f} </strong> <strong> {curElemt.halfHrOutCallRate_f} </strong> </span >
+                                  <span>AED <strong> {curElemt.oneHrInCallRate_f} </strong> <strong> {curElemt.oneHrOutCallRate_f} </strong> </span >
                                 </div>
 
                               </div>
@@ -99,8 +98,7 @@ const Duoescorts = () => {
                                     <div className={styles.picbox}>
                                       <img
                                         src={`https://dev.havingado.net/babesofdubai${curElemt.thumbnail_s}`}
-                                        width={270}
-                                        height={400}
+
                                         alt={curElemt.escort_name_s}
                                         layout="responsive"
                                       />
@@ -126,7 +124,7 @@ const Duoescorts = () => {
                                 </div>
                                 <div className={styles.modelslocation}>
                                   <span>{curElemt.location_s}</span>
-                                  <span>AED <strong> {curElemt.halfHrInCallRate_s} </strong> <strong> {curElemt.halfHrOutCallRate_s} </strong> </span >
+                                  <span>AED <strong> {curElemt.oneHrInCallRate_f} </strong> <strong> {curElemt.oneHrOutCallRate_f} </strong> </span >
                                 </div>
 
                               </div>

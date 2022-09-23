@@ -21,45 +21,42 @@ export default function Home() {
   const [HomepageModeldata, setHomePageModeldata] = useState([]);
   const [fillterdata, setFillterData] = useState([]);
 
-
-  const locationData = (event) => {
-    // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
-  };
-
-  const serviceData = (event) => {
-    // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
-  };
-
-  const hairColorData = (event) => {
-    // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
-  };
-
-  const ratesData = (event) => {
-    // console.log("event iss", event);
-    setHomePageModeldata(event.escorts);
-  };
-
-
-
   const fetchData = async () => {
     var data = await HomepageData();
     setHomeDatanew(data.page);
   };
 
+  const locationData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const serviceData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const hairColorData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
+  const ratesData = (event) => {
+    // console.log("event iss", event);
+    setHomePageModeldata(event?.escorts);
+  };
+
   /* this function for home page modals API line no 28 to 31 and 32,35 */
   const fetchModalthumData = async () => {
     var hmthum = await HModeldata();
-    setHomePageModeldata(hmthum.escorts)
+    setHomePageModeldata(hmthum.escorts);
   };
 
   /* fillter data listing API here*/
   const fetchfillterData = async () => {
     var filldata = await Fillterdataapi();
     setFillterData(filldata);
-    console.log(fillterdata)
+    console.log("filterrdata", filldata);
   };
 
   useEffect(() => {
@@ -69,6 +66,8 @@ export default function Home() {
       fetchfillterData();
     }, 2000);
   }, []);
+
+  console.log(fillterdata);
 
   /* this for buger menu */
   const [isHidden1, setIsHidden1] = useState(true);
@@ -104,7 +103,7 @@ export default function Home() {
 
                 <Container fluid className={styles.h_thumnanils}>
                   <Row>
-                    <div className={styles.heading_shorby}>Sort by</div>
+                    {/* <div className={styles.heading_shorby}>Sort by</div> */}
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 10, order: 1 }} md={{ span: 9, order: 1 }}>
                       <Modelsthums modeldata={HomepageModeldata} />
                     </Col>
