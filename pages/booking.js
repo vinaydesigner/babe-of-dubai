@@ -129,7 +129,7 @@ const Booking = () => {
                       );
                     })}
                   </select>
-                  <div>
+                  <div className={styles.formreviewimage}>
                     <img
                       src={`https://dev.havingado.net/babesofdubai${attributeList}`}
                       alt="Model name"

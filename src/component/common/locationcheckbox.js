@@ -39,10 +39,40 @@ const Locationcheck = ({
         }
 
         var data = new FormData();
-        data.append("location[]", locationCheck);
-        data.append("hair_color[]", hairColorr);
-        data.append("service[]", servicesss);
-        data.append("rate", ratess);
+
+        if (locationCheck.length == 0) {
+            data.append(`location[]`, "");
+        } else {
+            locationCheck.map((item, index) => {
+                data.append(`location[${index}]`, item);
+            });
+        }
+
+        if (hairColorr.length == 0) {
+            data.append(`hair_color[]`, "");
+        } else {
+            hairColorr.map((item, index) => {
+                data.append(`hair_color[${index}]`, item);
+            });
+        }
+
+        if (servicesss.length == 0) {
+            data.append(`service[]`, "");
+        } else {
+            console.log(servicesss);
+            servicesss.map((item, index) => {
+                data.append(`service[${index}]`, item);
+            });
+        }
+
+        if (ratess.length == 0) {
+            data.append(`rate`, "");
+        } else {
+            ratess.map((item, index) => {
+                data.append(`rate`, item);
+            });
+        }
+
         const response = await Fillterpostdataapi(data);
         console.log(response);
         locationResponse(response);

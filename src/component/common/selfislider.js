@@ -61,25 +61,23 @@ function ControlledCarousel({ data }) {
         setIndex(selectedIndex);
     };
 
-
-
-
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
-            {data?.selfie_gallery?.map((Item) => {
+            {data?.selfie_gallery?.map((Item, index) => {
                 console.log(Item)
                 return (
                     <>
-                        <div key={Item}>
-                            <Carousel.Item className={index === 0 ? "active" : ""}>
-                                <img src={`https://dev.havingado.net/babesofdubai/${Item?.selfie_img}`}
-                                />
-                            </Carousel.Item>
-                        </div>
+
+                        <Carousel.Item key={index} className={index === 0 ? '' : 'active'} >
+                            <img src={`https://dev.havingado.net/babesofdubai${Item?.selfie_img}`}
+                            />
+                        </Carousel.Item>
+
+
                     </>
                 )
             })}
-        </Carousel>
+        </Carousel >
     );
 }
 
@@ -88,6 +86,9 @@ function ControlledCarousel({ data }) {
 
 const Selfislider = ({ data }) => {
     return (
+
+
+
         <ControlledCarousel data={data} />
     )
 }

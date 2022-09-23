@@ -19,7 +19,7 @@ const initialValues = {
   looks: "",
   performance: "",
   comment: "",
-  status: "1",
+  status: "0",
 };
 
 const Writeareview = () => {

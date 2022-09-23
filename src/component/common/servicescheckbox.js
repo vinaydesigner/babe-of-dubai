@@ -36,10 +36,40 @@ const Servicescheckbox = ({
         }
 
         var data = new FormData();
-        data.append("service[]", serviceCheck);
-        data.append("hair_color[]", hairColorr);
-        data.append("location[]", locationn);
-        data.append("rate", ratess);
+
+        if (locationn.length == 0) {
+            data.append(`location[]`, "");
+        } else {
+            locationn.map((item, index) => {
+                data.append(`location[${index}]`, item);
+            });
+        }
+
+        if (hairColorr.length == 0) {
+            data.append(`hair_color[]`, "");
+        } else {
+            hairColorr.map((item, index) => {
+                data.append(`hair_color[${index}]`, item);
+            });
+        }
+
+        if (serviceCheck.length == 0) {
+            data.append(`service[]`, "");
+        } else {
+            console.log(servicesss);
+            serviceCheck.map((item, index) => {
+                data.append(`service[${index}]`, item);
+            });
+        }
+
+        if (ratess.length == 0) {
+            data.append(`rate`, "");
+        } else {
+            ratess.map((item, index) => {
+                data.append(`rate`, item);
+            });
+        }
+
         const response = await Fillterpostdataapi(data);
         // console.log(response);
         serviceResponse(response);
