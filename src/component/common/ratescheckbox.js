@@ -21,14 +21,14 @@ const Ratescheckbox = ({
       ratess(rateCheck);
     } else {
       console.log("service", rateCheck);
-      var a = rateCheck.findIndex((key) => Number(key) == Number(item.id));
-      // console.log("a is", a);
+      var a = rateCheck.findIndex((key) => key == item.range);
+      console.log("a is", a);
       if (a == -1) {
         rateCheck.push(item.range);
         setRateCheck(rateCheck);
         ratess(rateCheck);
       } else {
-        hairCheck.splice(a, 1);
+        rateCheck.splice(a, 1);
         setRateCheck(rateCheck);
         ratess(rateCheck);
       }
@@ -62,10 +62,10 @@ const Ratescheckbox = ({
     }
 
     if (rateCheck.length == 0) {
-      data.append(`rate`, "");
+      data.append(`rate[]`, "");
     } else {
       rateCheck.map((item, index) => {
-        data.append(`rate`, item);
+        data.append(`rate[${index}]`, item);
       });
     }
 

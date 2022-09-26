@@ -26,7 +26,7 @@ const Locationcheck = ({
     } else {
       console.log("service", locationCheck);
       var a = locationCheck.findIndex((key) => Number(key) == Number(item.id));
-      // console.log("a is", a);
+      console.log("a is", a);
       if (a == -1) {
         locationCheck.push(item.id);
         setlocationCheck(locationCheck);
@@ -66,10 +66,10 @@ const Locationcheck = ({
     }
 
     if (ratess.length == 0) {
-      data.append(`rate`, "");
+      data.append(`rate[]`, "");
     } else {
       ratess.map((item, index) => {
-        data.append(`rate`, item);
+        data.append(`rate[${index}]`, item);
       });
     }
 

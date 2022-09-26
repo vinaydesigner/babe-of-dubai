@@ -63,10 +63,10 @@ const Servicescheckbox = ({
     }
 
     if (ratess.length == 0) {
-      data.append(`rate`, "");
+      data.append(`rate[]`, "");
     } else {
       ratess.map((item, index) => {
-        data.append(`rate`, item);
+        data.append(`rate[${index}]`, item);
       });
     }
 
