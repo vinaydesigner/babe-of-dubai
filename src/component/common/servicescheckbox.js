@@ -56,17 +56,17 @@ const Servicescheckbox = ({
         if (serviceCheck.length == 0) {
             data.append(`service[]`, "");
         } else {
-            console.log(servicesss);
+            // console.log(servicesss);
             serviceCheck.map((item, index) => {
                 data.append(`service[${index}]`, item);
             });
         }
 
         if (ratess.length == 0) {
-            data.append(`rate`, "");
+            data.append(`rate[]`, "");
         } else {
             ratess.map((item, index) => {
-                data.append(`rate`, item);
+                data.append(`rate[${index}]`, item);
             });
         }
 
