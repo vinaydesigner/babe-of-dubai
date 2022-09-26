@@ -66,10 +66,10 @@ const Haircolorcheckbox = ({
         }
 
         if (ratess.length == 0) {
-            data.append(`rate`, "");
+            data.append(`rate[]`, "");
         } else {
             ratess.map((item, index) => {
-                data.append(`rate`, item);
+                data.append(`rate[${index}]`, item);
             });
         }
         const response = await Fillterpostdataapi(data);
@@ -80,7 +80,7 @@ const Haircolorcheckbox = ({
     return (
         <>
             {fillter?.hair_color?.map((item) => {
-                console.log("item", item);
+                // console.log("item", item);
                 return (
                     <>
                         <div key={item.id}>
