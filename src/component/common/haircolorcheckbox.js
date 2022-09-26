@@ -2,9 +2,9 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import { Fillterpostdataapi } from "../../api/homepageapi";
 
-const initialValues = {
-    hair_color: "",
-};
+// const initialValues = {
+//     hair_color: "",
+// };
 
 const Haircolorcheckbox = ({
     fillter,
@@ -25,8 +25,8 @@ const Haircolorcheckbox = ({
             hairColorr(hairCheck);
         } else {
             console.log("service", hairCheck);
-            var a = hairCheck.findIndex((key) => Number(key) == Number(item.id));
-            // console.log("a is", a);
+            var a = hairCheck.findIndex((key) => key == item.id);
+            console.log("a is", a);
             if (a == -1) {
                 hairCheck.push(item.id);
                 sethairCheck(hairCheck);
@@ -80,14 +80,14 @@ const Haircolorcheckbox = ({
     return (
         <>
             {fillter?.hair_color?.map((item) => {
-                // console.log("item", item);
+                console.log("item", item);
                 return (
                     <>
                         <div key={item.id}>
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="hair_color[]"
+                                    name="hair_color"
                                     //   value={values.hair_color}
                                     onChange={() => handleChange(item)}
                                 ></input> {item.hair_color}

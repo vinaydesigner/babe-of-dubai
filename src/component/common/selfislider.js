@@ -6,6 +6,9 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
+
+
+
 // function ControlledCarousel({ data }) {
 //     console.log(data)
 //     const [index, setIndex] = useState(0);
@@ -61,19 +64,17 @@ function ControlledCarousel({ data }) {
         setIndex(selectedIndex);
     };
 
+
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
             {data?.selfie_gallery?.map((Item, index) => {
                 console.log(Item)
                 return (
                     <>
-
-                        <Carousel.Item key={index} className={index === 0 ? '' : 'active'} >
+                        <Carousel.Item key={Item} className={index === 0 ? '' : 'active'} >
                             <img src={`https://dev.havingado.net/babesofdubai${Item?.selfie_img}`}
                             />
                         </Carousel.Item>
-
-
                     </>
                 )
             })}
@@ -86,9 +87,6 @@ function ControlledCarousel({ data }) {
 
 const Selfislider = ({ data }) => {
     return (
-
-
-
         <ControlledCarousel data={data} />
     )
 }
